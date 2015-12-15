@@ -93,6 +93,7 @@ void  main(void)
     while(1)
     {  
       LCD_Show_Number(5,2,123);
+      printf("abc");
       if(img_flag == IMG_FINISH)
       {
         img_flag = IMG_PROCESS;
