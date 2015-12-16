@@ -87,13 +87,12 @@ void  main(void)
     
     enable_irq (PORTC_IRQn);
     
-    EnableInterrupts;
+    EnableInterrupts;   //数据采集完成
     
    
     while(1)
     {  
-      LCD_Show_Number(5,2,123);
-      printf("abc");
+      //LCD_Show_Number(5,2,123);
       if(img_flag == IMG_FINISH)
       {
         img_flag = IMG_PROCESS;
@@ -114,7 +113,7 @@ void  main(void)
         }
         
         /*************液晶屏显示程序**********/
-        /*
+        
         for(int j=0;j<CAMERA_R_H;j++)
         {
           for(int i=CAMERA_W;i>0;i--)
@@ -134,7 +133,7 @@ void  main(void)
           }
         }
         OLED_Refresh_Gram();
-        */
+        
         
         PORTC_ISFR = ~0;               //写1清中断标志位(必须的，不然回导致一开中断就马上触发中断)
         enable_irq(PORTC_IRQn);

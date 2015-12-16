@@ -33,8 +33,8 @@
 #define UART3_RX    PTE5       //PTB10、PTC16、PTE5
 #define UART3_TX    PTE4       //PTB11、PTC17、PTE4
 
-#define UART4_RX    PTE25      //PTC14、PTE25
-#define UART4_TX    PTE24     //PTC15、PTE24
+#define UART4_RX    PTE25            //PTC14、PTE25
+#define UART4_TX    PTE24       //PTC15、PTE24
 
 #define UART5_RX    PTE9        //PTD8、PTE9
 #define UART5_TX    PTE8        //PTD9、PTE8

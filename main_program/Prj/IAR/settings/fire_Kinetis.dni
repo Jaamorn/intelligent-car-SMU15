@@ -9,7 +9,7 @@ TriggerName=main
 LimitSize=0
 ByteLimit=50
 [DebugChecksum]
-Checksum=-1750754909
+Checksum=-271863054
 [Exceptions]
 StopOnUncaught=_ 0
 StopOnThrow=_ 0
@@ -22,13 +22,6 @@ CStepIntDis=_ 0
 TraceBufferSize=0x00010000
 TraceStallIfFIFOFull=0x00000000
 TracePortSize=0x00000004
-[Trace1]
-Enabled=0
-ShowSource=1
-[Disassemble mode]
-mode=0
-[Breakpoints2]
-Count=0
 [Log file]
 LoggingEnabled=_ 0
 LogFile=_ ""
@@ -36,13 +29,6 @@ Category=_ 0
 [TermIOLog]
 LoggingEnabled=_ 0
 LogFile=_ ""
-[Aliases]
-A0=_ "C:\Users\Xiaochaochao\Desktop\K60\OV5116\Board\src\FIRE_LED.C" ""
-A1=_ "C:\Users\Xiaochaochao\Desktop\K60\OV5116\Chip\src\MK60_DWT.c" ""
-A2=_ "C:\Users\Xiaochaochao\Desktop\K60\OV5116\Chip\src\MK60_gpio.c" ""
-A3=_ "C:\Users\Xiaochaochao\Desktop\K60\OV5116\Chip\src\MK60_mcg.c" ""
-Count=4
-SuppressDialog=1
 [CallStackLog]
 Enabled=0
 [DriverProfiling]
@@ -51,3 +37,15 @@ Mode=1
 Graph=0
 Symbiont=0
 Exclusions=
+[Disassemble mode]
+mode=0
+[Breakpoints2]
+Count=0
+[Aliases]
+A0=_ "C:\Users\Xiaochaochao\Desktop\K60\OV5116\Board\src\FIRE_LED.C" ""
+A1=_ "C:\Users\Xiaochaochao\Desktop\K60\OV5116\Chip\src\MK60_DWT.c" ""
+A2=_ "C:\Users\Xiaochaochao\Desktop\K60\OV5116\Chip\src\MK60_gpio.c" ""
+A3=_ "C:\Users\Xiaochaochao\Desktop\K60\OV5116\Chip\src\MK60_mcg.c" ""
+A4=_ "C:\Users\Xiaochaochao\Desktop\K60\OV5116\Chip\src\lcd.c" ""
+Count=5
+SuppressDialog=1
