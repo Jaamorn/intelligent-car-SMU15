@@ -29,7 +29,7 @@ void LED_init(void)
 }
 
 
-#define CAMERA_W            260              //定义摄像头图像宽度
+#define CAMERA_W            200              //定义摄像头图像宽度
 #define CAMERA_H            240              //定义摄像头图像高度
 #define CAMERA_R_H          40               //定义摄像头图像高度
 #define CAMERA_SIZE         CAMERA_W*CAMERA_H
