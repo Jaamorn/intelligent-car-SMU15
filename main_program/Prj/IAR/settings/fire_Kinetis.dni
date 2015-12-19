@@ -9,7 +9,7 @@ TriggerName=main
 LimitSize=0
 ByteLimit=50
 [DebugChecksum]
-Checksum=266331532
+Checksum=1301806150
 [Exceptions]
 StopOnUncaught=_ 0
 StopOnThrow=_ 0
@@ -34,9 +34,6 @@ Count=1
 LoggingEnabled=_ 0
 LogFile=_ ""
 Category=_ 0
-[TermIOLog]
-LoggingEnabled=_ 0
-LogFile=_ ""
 [Aliases]
 A0=_ "C:\Users\Xiaochaochao\Desktop\K60\OV5116\Board\src\FIRE_LED.C" ""
 A1=_ "C:\Users\Xiaochaochao\Desktop\K60\OV5116\Chip\src\MK60_DWT.c" ""
@@ -53,3 +50,6 @@ Mode=1
 Graph=0
 Symbiont=0
 Exclusions=
+[TermIOLog]
+LoggingEnabled=_ 0
+LogFile=_ ""
