@@ -12,6 +12,7 @@
  * @author     野火科技
  * @version    v5.0
  * @date       2013-08-28
+ * 香港记者
  */
 
 #include "common.h"
@@ -34,6 +35,7 @@ void LED_init(void)
 #define CAMERA_SIZE         CAMERA_W*CAMERA_H
 #define BLACK_C 0
 #define WHITE_C 254
+ 
 
 
 uint8 imgbuff[CAMERA_R_H][CAMERA_W];                             //定义存储接收图像的数组
@@ -70,7 +72,7 @@ void portc_handler();
 
 void  main(void)
 {
-  
+
     DisableInterrupts;
     LED_init();
     uart_init (UART4, 115200);                        
@@ -134,6 +136,31 @@ void  main(void)
         }
         OLED_Refresh_Gram();
         
+        /*************中线提取程序**********/
+        int POINT_R; //定义图像采集的右点
+        int POINT_L; //定义图像采集的左点
+        int POINT_C; //定义图像采集的中点
+        int L = 30;   //定义要采集的行号
+        for (int i = 0; i < 100; i++)
+        {
+        	if(imgbuff[L][i+1]-imgbuff[L][i]>40 )
+        	{
+        		POINT_L = i;
+        		LCD_Show_Number(50,3,POINT_L);
+        	}
+        }
+
+        for (int i = CAMERA_W; i > 100; i--)
+        {
+        	if(imgbuff[L][i-1]-imgbuff[L][i]>40 )
+        	{
+        		POINT_R = i;
+        		LCD_Show_Number(50,4,POINT_R);
+        	}
+        }
+
+        POINT_C = (POINT_R + POINT_R)/2;
+        LCD_Show_Number(50,5,POINT_C);
         
         PORTC_ISFR = ~0;               //写1清中断标志位(必须的，不然回导致一开中断就马上触发中断)
         enable_irq(PORTC_IRQn);
