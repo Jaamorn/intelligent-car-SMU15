@@ -46,6 +46,6 @@ A0=_ "C:\Users\Xiaochaochao\Desktop\K60\OV5116\Board\src\FIRE_LED.C" ""
 A1=_ "C:\Users\Xiaochaochao\Desktop\K60\OV5116\Chip\src\MK60_DWT.c" ""
 A2=_ "C:\Users\Xiaochaochao\Desktop\K60\OV5116\Chip\src\MK60_gpio.c" ""
 A3=_ "C:\Users\Xiaochaochao\Desktop\K60\OV5116\Chip\src\MK60_mcg.c" ""
-A4=_ "C:\Users\Xiaochaochao\Desktop\K60\OV5116\Chip\src\lcd.c" ""
+A4=_ "C:\Users\Xiaochaochao\Desktop\K60\OV5116\Chip\src\lcd.c" "C:\Users\jamorn\Desktop\Dev\Github\intelligent-car-SMU15\main_program\Chip\src\lcd.c"
 Count=5
 SuppressDialog=1
