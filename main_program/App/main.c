@@ -158,10 +158,22 @@ void  main(void)
         		LCD_Show_Number(70,4,POINT_R);
         	}
         }
-
+        
         POINT_C = (POINT_L+POINT_R)/2;
         LCD_Show_Number(70,7,POINT_C);
-        
+
+        /*************舵机保护程序**********/
+        int DUTY;
+        if(DUTY>850)
+        {
+          DUTY = 845;
+        }
+        if(DUTY<775)
+        {
+          DUTY = 770;
+        }
+        /*************控制程序**********/
+        FTM_PWM_init(FTM0, FTM_CH0,50, 775);
         PORTC_ISFR = ~0;               //写1清中断标志位(必须的，不然回导致一开中断就马上触发中断)
         enable_irq(PORTC_IRQn);
         img_flag = IMG_START;
