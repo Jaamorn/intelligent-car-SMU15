@@ -29,7 +29,7 @@ void LED_init(void)
 }
 
 
-#define CAMERA_W            200              //定义摄像头图像宽度
+#define CAMERA_W            280              //定义摄像头图像宽度
 #define CAMERA_H            240              //定义摄像头图像高度
 #define CAMERA_R_H          40               //定义摄像头图像高度
 #define CAMERA_SIZE         CAMERA_W*CAMERA_H
@@ -140,27 +140,27 @@ void  main(void)
         int POINT_R; //定义图像采集的右点
         int POINT_L; //定义图像采集的左点
         int POINT_C; //定义图像采集的中点
-        int L = 30;   //定义要采集的行号
-        for (int i = 0; i < 100; i++)
+        int L = 25;   //定义要采集的行号
+        for (int i = 0; i < 140; i++)
         {
         	if(imgbuff[L][i+1]-imgbuff[L][i]>40 )
         	{
         		POINT_L = i;
-        		LCD_Show_Number(50,3,POINT_L);
+        		LCD_Show_Number(70,3,POINT_L);
         	}
         }
 
-        for (int i = CAMERA_W; i > 100; i--)
+        for (int i = CAMERA_W; i > 140; i--)
         {
         	if(imgbuff[L][i-1]-imgbuff[L][i]>40 )
         	{
         		POINT_R = i;
-        		LCD_Show_Number(50,4,POINT_R);
+        		LCD_Show_Number(70,4,POINT_R);
         	}
         }
 
-        POINT_C = (POINT_R + POINT_R)/2;
-        LCD_Show_Number(50,5,POINT_C);
+        POINT_C = (POINT_L+POINT_R)/2;
+        LCD_Show_Number(70,7,POINT_C);
         
         PORTC_ISFR = ~0;               //写1清中断标志位(必须的，不然回导致一开中断就马上触发中断)
         enable_irq(PORTC_IRQn);
@@ -188,7 +188,7 @@ void portb_handler()
       {
         if(V_Cnt==sz[num])
         {
-          systick_delay(400);
+          systick_delay(570);
           DMA_EN(DMA_CH0);
           num++;
         }
