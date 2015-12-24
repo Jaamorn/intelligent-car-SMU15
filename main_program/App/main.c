@@ -165,13 +165,16 @@ void  main(void)
         /*************舵机保护程序**********/
         int DUTY;定义占空比
 
-        if(DUTY>850)
+        int prot(int DUTY_safe)
         {
-          DUTY = 845;
-        }
-        if(DUTY<702)
-        {
-          DUTY = 705;
+          if(DUTY>850)
+          {
+            DUTY = 845;
+          }
+          if(DUTY<702)
+          {
+            DUTY = 705;
+          }
         }
         /*************控制程序**********/
         int MID ＝ ;
@@ -182,14 +185,26 @@ void  main(void)
         if(POINT_C > MID)//右拐
         {
             DUTY = 775 - K_RIGHT*(POINT_C - MID);
-            //插入舵机保护函数
+
+            if(DUTY<702)
+          {
+            DUTY = 705;
+          }//舵机保护
             FTM_PWM_Duty(FTM0, FTM_CH0, DUTY);
         }  
+
+
+        
         if(POINT_C<MID)//左拐
         {
             DUTY= 775 + K_RIGHT*(MID - POINT_C);
+
+            if(DUTY>850)
+          {
+            DUTY = 845;
+          }
             //插入舵机保护函数
-            FTM_PWM_Duty(FTM0, FTM_CH0, DUTY);
+          FTM_PWM_Duty(FTM0, FTM_CH0, DUTY);
         }      
 
 
