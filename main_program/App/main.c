@@ -163,17 +163,38 @@ void  main(void)
         LCD_Show_Number(70,7,POINT_C);
 
         /*************舵机保护程序**********/
-        int DUTY;
+        int DUTY;定义占空比
+
         if(DUTY>850)
         {
           DUTY = 845;
         }
-        if(DUTY<775)
+        if(DUTY<702)
         {
-          DUTY = 770;
+          DUTY = 705;
         }
         /*************控制程序**********/
-        FTM_PWM_init(FTM0, FTM_CH0,50, 775);
+        int MID ＝ ;
+        int K_LEFT ＝ 1.71;
+        int K_RIGHT ＝  1.71;
+        MID= ; //设定参考中点值
+        FTM_PWM_init(FTM0, FTM_CH0,50, 775);   //初始化PWM输出中值
+        if(POINT_C > MID)//右拐
+        {
+            DUTY = 775 - K_RIGHT*(POINT_C - MID);
+            //插入舵机保护函数
+            FTM_PWM_Duty(FTM0, FTM_CH0, DUTY);
+        }  
+        if(POINT_C<MID)//左拐
+        {
+            DUTY= 775 + K_RIGHT*(MID - POINT_C);
+            //插入舵机保护函数
+            FTM_PWM_Duty(FTM0, FTM_CH0, DUTY);
+        }      
+
+
+
+
         PORTC_ISFR = ~0;               //写1清中断标志位(必须的，不然回导致一开中断就马上触发中断)
         enable_irq(PORTC_IRQn);
         img_flag = IMG_START;
