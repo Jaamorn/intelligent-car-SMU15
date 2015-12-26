@@ -163,8 +163,8 @@ void  main(void)
         LCD_Show_Number(70,7,POINT_C);
 
         /*************舵机保护程序**********/
-        int DUTY;定义占空比
-
+        int DUTY;//定义占空比
+         /*
         int prot(int DUTY_safe)
         {
           if(DUTY>850)
@@ -176,11 +176,12 @@ void  main(void)
             DUTY = 705;
           }
         }
+        */
         /*************控制程序**********/
-        int MID ＝ ;
-        int K_LEFT ＝ 1.71;
-        int K_RIGHT ＝  1.71;
-        MID= ; //设定参考中点值
+        int MID
+        float K_LEFT＝ 1.71 ;
+        float K_RIGHT＝ 1.71;
+        MID= 120; //设定参考中点值
         FTM_PWM_init(FTM0, FTM_CH0,50, 775);   //初始化PWM输出中值
         if(POINT_C > MID)//右拐
         {
