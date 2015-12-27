@@ -29,7 +29,7 @@ void LED_init(void)
 }
 
 
-#define CAMERA_W            280              //定义摄像头图像宽度
+#define CAMERA_W            260              //定义摄像头图像宽度
 #define CAMERA_H            240              //定义摄像头图像高度
 #define CAMERA_R_H          40               //定义摄像头图像高度
 #define CAMERA_SIZE         CAMERA_W*CAMERA_H
@@ -112,7 +112,7 @@ void  main(void)
             }
             uart_putchar(UART4,imgbuff[j][i]);
           }
-        }
+       }
         
         /*************液晶屏显示程序**********/
         
@@ -162,31 +162,21 @@ void  main(void)
         POINT_C = (POINT_L+POINT_R)/2;
         LCD_Show_Number(70,7,POINT_C);
 
-        /*************舵机保护程序**********/
-        int DUTY;//定义占空比
-         /*
-        int prot(int DUTY_safe)
-        {
-          if(DUTY>850)
-          {
-            DUTY = 845;
-          }
-          if(DUTY<702)
-          {
-            DUTY = 705;
-          }
-        }
-        */
+        
         /*************控制程序**********/
-        int MID
-        float K_LEFT＝ 1.71 ;
-        float K_RIGHT＝ 1.71;
-        MID= 120; //设定参考中点值
+        /*
+        int MID;
+        float K_LEFT = 1.71;
+        float K_RIGHT = 1.71;
+        float DUTY_F;
+        int DUTY;
+        MID= 120;//设定参考中点值
+        K_RIGHT = 1.71; 
         FTM_PWM_init(FTM0, FTM_CH0,50, 775);   //初始化PWM输出中值
         if(POINT_C > MID)//右拐
         {
-            DUTY = 775 - K_RIGHT*(POINT_C - MID);
-
+            DUTY_F = 775 - K_RIGHT*(POINT_C - MID);
+            DUTY=(int)DUTY_F;
             if(DUTY<702)
           {
             DUTY = 705;
@@ -198,16 +188,49 @@ void  main(void)
         
         if(POINT_C<MID)//左拐
         {
-            DUTY= 775 + K_RIGHT*(MID - POINT_C);
-
+            DUTY_F = 775 + K_LEFT*(MID - POINT_C);
+            DUTY=(int)DUTY_F;
             if(DUTY>850)
           {
             DUTY = 845;
           }
-            //插入舵机保护函数
+            //舵机保护
           FTM_PWM_Duty(FTM0, FTM_CH0, DUTY);
         }      
+        */
+        
+        int MID;
+        //float K_LEFT = 1.71;
+        //float K_RIGHT = 1.71;
+        //float DUTY_F;
+        int DUTY;
+        MID= 120;//设定参考中点值
+        //K_RIGHT = 1.71; 
+        FTM_PWM_init(FTM0, FTM_CH0,50,775);   //初始化PWM输出中值 PTC1  775
+        if(POINT_C > MID)//右拐
+        {
+            DUTY = 775 - 2*(POINT_C - MID);
+            //DUTY=(int)DUTY_F;
+            if(DUTY<702)
+          {
+            DUTY = 705;
+          }//舵机保护
+            FTM_PWM_Duty(FTM0, FTM_CH0, DUTY);
+        }  
 
+
+        
+        if(POINT_C<MID)//左拐
+        {
+            DUTY = 775 + 2*(MID - POINT_C);
+            //DUTY=(int)DUTY_F;
+            if(DUTY>850)
+          {
+            DUTY = 845;
+          }
+            //舵机保护
+          FTM_PWM_Duty(FTM0, FTM_CH0, DUTY);
+        }      
 
 
 
