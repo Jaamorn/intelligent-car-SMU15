@@ -72,7 +72,17 @@ void portc_handler();
 
 void  main(void)
 {
-
+    /*************驱动程序**********/
+    //FTM_PWM_init(FTM0, FTM_CH1,50, 0);
+    FTM_PWM_init(FTM0, FTM_CH2,50, 1000);
+  
+    //FTM_PWM_init(FTM0, FTM_CH3,50, 0);
+    //FTM_PWM_init(FTM0, FTM_CH4,50, 1000);
+  
+  
+  
+  
+  
     DisableInterrupts;
     LED_init();
     uart_init (UART4, 115200);                        
@@ -198,13 +208,21 @@ void  main(void)
           FTM_PWM_Duty(FTM0, FTM_CH0, DUTY);
         }      
         */
+   
         
-        int MID;
+        
+        
+        
+        
+        
+        
+        
+        /*
         //float K_LEFT = 1.71;
         //float K_RIGHT = 1.71;
         //float DUTY_F;
         int DUTY;
-        MID= 120;//设定参考中点值
+        int MID= 120;//设定参考中点值
         //K_RIGHT = 1.71; 
         FTM_PWM_init(FTM0, FTM_CH0,50,775);   //初始化PWM输出中值 PTC1  775
         if(POINT_C > MID)//右拐
@@ -232,7 +250,7 @@ void  main(void)
           FTM_PWM_Duty(FTM0, FTM_CH0, DUTY);
         }      
 
-
+         */
 
         PORTC_ISFR = ~0;               //写1清中断标志位(必须的，不然回导致一开中断就马上触发中断)
         enable_irq(PORTC_IRQn);

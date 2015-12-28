@@ -6,275 +6,187 @@
   <configuration>
     <name>DZ10_Debug</name>
     <outputs>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\misc.pbi</file>
       <file>$PROJ_DIR$\..\..\Lib\CMSIS\iar_cortexM4l_math.a</file>
-      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_camera.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\xtgmath.h</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_port.h</file>
       <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_SysTick.pbi</file>
-      <file>$PROJ_DIR$\..\..\Board\src\FIRE_MK60_conf.c</file>
-      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_MK60_conf.h</file>
-      <file>$PROJ_DIR$\..\..\App\main.c</file>
-      <file>$PROJ_DIR$\..\..\Board\src\FIRE_key.c</file>
-      <file>$PROJ_DIR$\..\..\Board\src\FIRE_LED.C</file>
-      <file>$PROJ_DIR$\..\..\App\MK60_it.c</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\misc.pbi</file>
+      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_camera.h</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_port.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\xtgmath.h</file>
+      <file>$PROJ_DIR$\..\..\Chip\src\MK60_mcg.c</file>
       <file>$PROJ_DIR$\..\..\Chip\src\MK60_PIT.c</file>
-      <file>$PROJ_DIR$\..\..\Chip\src\MK60_SysTick.c</file>
-      <file>$PROJ_DIR$\..\..\Chip\src\MK60_adc.c</file>
-      <file>$PROJ_DIR$\..\..\Chip\src\MK60_wdog.c</file>
-      <file>$PROJ_DIR$\..\..\Board\src\FIRE_MMA7455.c</file>
-      <file>$PROJ_DIR$\..\..\Board\src\FIRE_SCCB.c</file>
-      <file>$PROJ_DIR$\..\..\Chip\src\IAR\startup_MK60DZ10.s</file>
-      <file>$PROJ_DIR$\..\..\Chip\src\MK60_spi.c</file>
-      <file>$PROJ_DIR$\..\..\Chip\src\IAR\system_MK60DZ10.c</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\common.h</file>
-      <file>$PROJ_DIR$\..\..\Chip\src\misc.c</file>
-      <file>$PROJ_DIR$\..\..\Chip\src\MK60_port.c</file>
-      <file>$PROJ_DIR$\..\..\Chip\src\MK60_uart.c</file>
-      <file>$PROJ_DIR$\..\..\Chip\src\vectors.c</file>
       <file>$TOOLKIT_DIR$\lib\m7M_tl.a</file>
+      <file>$PROJ_DIR$\..\..\Board\src\FIRE_MK60_conf.c</file>
+      <file>$PROJ_DIR$\..\..\Board\src\FIRE_LED.C</file>
+      <file>$PROJ_DIR$\..\..\Board\src\FIRE_NRF24L0.c</file>
+      <file>$PROJ_DIR$\..\..\Board\src\UART.c</file>
       <file>$PROJ_DIR$\..\..\Board\src\SYN6288.c</file>
+      <file>$PROJ_DIR$\..\..\Chip\src\misc.c</file>
+      <file>$PROJ_DIR$\..\..\Chip\src\MK60_adc.c</file>
+      <file>$PROJ_DIR$\..\..\Board\src\lcd.c</file>
+      <file>$PROJ_DIR$\..\..\Board\src\FIRE_SCCB.c</file>
       <file>$PROJ_DIR$\..\..\Chip\src\MK60_DWT.c</file>
       <file>$PROJ_DIR$\..\..\Chip\src\MK60_flash.c</file>
-      <file>$PROJ_DIR$\..\..\Board\src\FIRE_NRF24L0.c</file>
-      <file>$PROJ_DIR$\..\..\Board\src\lcd.c</file>
-      <file>$PROJ_DIR$\..\..\Chip\src\MK60_dma.c</file>
-      <file>$PROJ_DIR$\..\..\Chip\src\MK60_ftm.c</file>
       <file>$PROJ_DIR$\..\..\Chip\src\MK60_gpio.c</file>
       <file>$PROJ_DIR$\..\..\Chip\src\MK60_i2c.c</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\common.h</file>
+      <file>$PROJ_DIR$\..\..\Chip\src\MK60_spi.c</file>
+      <file>$PROJ_DIR$\..\..\Chip\src\MK60_port.c</file>
+      <file>$PROJ_DIR$\..\..\Chip\src\MK60_wdog.c</file>
+      <file>$PROJ_DIR$\..\..\Chip\src\IAR\startup_MK60DZ10.s</file>
+      <file>$PROJ_DIR$\..\..\Chip\src\MK60_SysTick.c</file>
+      <file>$PROJ_DIR$\..\..\Chip\src\IAR\system_MK60DZ10.c</file>
+      <file>$PROJ_DIR$\..\..\Board\src\FIRE_MMA7455.c</file>
+      <file>$PROJ_DIR$\..\..\Chip\src\MK60_ftm.c</file>
+      <file>$PROJ_DIR$\..\..\Chip\src\MK60_dma.c</file>
+      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_MK60_conf.h</file>
+      <file>$PROJ_DIR$\..\..\Chip\src\vectors.c</file>
+      <file>$PROJ_DIR$\..\..\Chip\src\MK60_uart.c</file>
       <file>$PROJ_DIR$\..\..\Chip\src\MK60_lptmr.c</file>
-      <file>$PROJ_DIR$\..\..\Board\src\UART.c</file>
-      <file>$PROJ_DIR$\..\..\Chip\src\MK60_mcg.c</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_flash.o</file>
-      <file>$PROJ_DIR$\..\..\Board\inc\SYN6288.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
-      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_PORT_cfg.h</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\FIRE_SCCB.o</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_port.pbi</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_lptmr.o</file>
-      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_OV7725_REG.h</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_DWT.pbi</file>
-      <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_uart.pbi</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\system_MK60DZ10.o</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\startup_MK60DZ10.o</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_adc.o</file>
-      <file>$PROJ_DIR$\..\..\App\Inc\include.h</file>
-      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_LED.H</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\misc.o</file>
-      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_OV7725_Wolf.h</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\FIRE_MK60_conf.pbi</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_dma.pbi</file>
-      <file>$PROJ_DIR$\..\..\Lib\CMSIS\Inc\arm_math.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\cmsis_iar.h</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_ftm.pbi</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\FIRE_NRF24L0.pbi</file>
-      <file>$PROJ_DIR$\..\..\Lib\CMSIS\Inc\core_cmFunc.h</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_i2c.h</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\misc.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_adc.h</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\FIRE_MK60_conf.o</file>
-      <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_dma.o</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_wdog.h</file>
-      <file>$PROJ_DIR$\DZ10_Debug\List\fire_Kinetis.map</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_PIT.h</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_it.pbi</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_spi.o</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_gpio.h</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\vectors.pbi</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_SysTick.o</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\FIRE_LED.pbi</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Full.h</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\system_MK60DZ10.pbi</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\FIRE_MMA7455.pbi</file>
+      <file>$PROJ_DIR$\..\..\App\main.c</file>
+      <file>$PROJ_DIR$\..\..\App\MK60_it.c</file>
+      <file>$PROJ_DIR$\..\..\Board\src\FIRE_key.c</file>
       <file>$PROJ_DIR$\DZ10_Debug\Obj\FIRE_LED.o</file>
-      <file>$TOOLKIT_DIR$\inc\c\ystdio.h</file>
-      <file>$PROJ_DIR$\..\..\Lib\CMSIS\Inc\core_cm4_simd.h</file>
-      <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\SYN6288.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_it.pbi</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_adc.h</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\vectors.pbi</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\FIRE_SCCB.o</file>
       <file>$PROJ_DIR$\..\..\Chip\inc\vectors.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ystdio.h</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\FIRE_NRF24L0.pbi</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_PIT.h</file>
+      <file>$PROJ_DIR$\..\..\Lib\CMSIS\Inc\core_cm4_simd.h</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_spi.o</file>
       <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_lptmr.h</file>
-      <file>$PROJ_DIR$\..\..\Chip\src\lcd.c</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\SYN6288.o</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\IAR\system_MK60DZ10.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Full.h</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\FIRE_LED.pbi</file>
+      <file>$PROJ_DIR$\DZ10_Debug\List\fire_Kinetis.map</file>
+      <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\system_MK60DZ10.pbi</file>
       <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\lcd.o</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\system_MK60DZ10.o</file>
       <file>$PROJ_DIR$\DZ10_Debug\Exe\fire_Kinetis.out</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_lptmr.h</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_SysTick.o</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_ftm.pbi</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_lptmr.o</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\lcd.o</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\IAR\system_MK60DZ10.h</file>
+      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_LED.H</file>
+      <file>$PROJ_DIR$\..\..\Lib\CMSIS\Inc\core_cmFunc.h</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_wdog.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_OV7725_REG.h</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\startup_MK60DZ10.o</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_it.o</file>
+      <file>$PROJ_DIR$\..\..\Board\inc\SYN6288.h</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_port.pbi</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_dma.o</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\FIRE_MMA7455.pbi</file>
       <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_PIT.o</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_dma.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
-      <file>$PROJ_DIR$\..\..\Board\inc\lcd.h</file>
-      <file>$PROJ_DIR$\..\..\Lib\CMSIS\Inc\core_cm4.h</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_flash.pbi</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_DWT.h</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\FIRE_MMA7455.o</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_mcg.h</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_wdog.o</file>
-      <file>$TOOLKIT_DIR$\inc\c\ymath.h</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\FIRE_MK60_conf.o</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_adc.o</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Exe\fire_Kinetis.hex</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\misc.o</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_DWT.pbi</file>
+      <file>$PROJ_DIR$\..\..\Lib\CMSIS\Inc\arm_math.h</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_dma.pbi</file>
+      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_OV7725_Wolf.h</file>
+      <file>$PROJ_DIR$\..\..\App\Inc\include.h</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_uart.pbi</file>
+      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_PORT_cfg.h</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\FIRE_MK60_conf.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_i2c.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\cmsis_iar.h</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_gpio.h</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_flash.o</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_adc.pbi</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\misc.h</file>
       <file>$PROJ_DIR$\DZ10_Debug\Obj\FIRE_key.o</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_gpio_cfg.h</file>
-      <file>$PROJ_DIR$\config files\fire_ROM_K60N512.icf</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\kinetis\MK60DZ10.h</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_mcg.h</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_i2c.o</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_mcg.o</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_wdog.o</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_spi.h</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_mcg.pbi</file>
+      <file>$PROJ_DIR$\..\..\App\Inc\MK60_it.h</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_flash.h</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\SYN6288.o</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\FIRE_NRF24L0.o</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_gpio.pbi</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_dma.h</file>
+      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_OV7725_Eagle.h</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_gpio.o</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_ftm.o</file>
+      <file>$PROJ_DIR$\..\..\Chip\src\lcd.c</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_PIT.pbi</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\UART.pbi</file>
+      <file>$PROJ_DIR$\..\..\Lib\CMSIS\Inc\core_cmInstr.h</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_i2c.pbi</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\main.pbi</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\FIRE_SCCB.pbi</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_spi.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\c\string.h</file>
       <file>$PROJ_DIR$\..\..\Chip\inc\MK60_FTM.h</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_SysTick.h</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\UART.o</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_flash.pbi</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_DWT.o</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_port.o</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_uart.o</file>
+      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_key.h</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\SYN6288.pbi</file>
+      <file>$PROJ_DIR$\..\..\Board\inc\UART.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
       <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_wdog.pbi</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_lptmr.pbi</file>
-      <file>$TOOLKIT_DIR$\lib\dl7M_tlf.a</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_uart.h</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\FIRE_key.pbi</file>
-      <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
-      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_MMA7455.h</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\vectors.o</file>
       <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
       <file>$PROJ_DIR$\..\..\Chip\inc\lcd.h</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_port.o</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\kinetis\MK60DZ10.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\math.h</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\vectors.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
       <file>$PROJ_DIR$\..\..\Board\inc\FIRE_NRF24L0.h</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\UART.pbi</file>
-      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_OV7725_Eagle.h</file>
-      <file>$PROJ_DIR$\..\..\Lib\CMSIS\Inc\core_cmInstr.h</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_ftm.o</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_mcg.o</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\main.pbi</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\FIRE_NRF24L0.o</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_SysTick.h</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\FIRE_MMA7455.o</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_uart.h</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_gpio_cfg.h</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_lptmr.pbi</file>
+      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_MMA7455.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ymath.h</file>
+      <file>$PROJ_DIR$\..\..\Board\inc\lcd.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\FIRE_key.pbi</file>
       <file>$PROJ_DIR$\DZ10_Debug\Obj\lcd.pbi</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_i2c.pbi</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\FIRE_SCCB.pbi</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_gpio.o</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_uart.o</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_gpio.pbi</file>
-      <file>$PROJ_DIR$\..\..\Board\inc\UART.h</file>
-      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_SCCB.h</file>
-      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_key.h</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_spi.pbi</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
-      <file>$PROJ_DIR$\..\..\App\Inc\MK60_it.h</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_DWT.o</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_spi.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\math.h</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_DWT.h</file>
       <file>$PROJ_DIR$\DZ10_Debug\Obj\main.o</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_i2c.o</file>
-      <file>$TOOLKIT_DIR$\inc\c\string.h</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_flash.h</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_PIT.pbi</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_mcg.pbi</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_adc.pbi</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Obj\MK60_it.o</file>
-      <file>$PROJ_DIR$\DZ10_Debug\Exe\fire_Kinetis.hex</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
+      <file>$PROJ_DIR$\config files\fire_ROM_K60N512.icf</file>
+      <file>$PROJ_DIR$\..\..\Lib\CMSIS\Inc\core_cm4.h</file>
+      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_SCCB.h</file>
+      <file>$PROJ_DIR$\DZ10_Debug\Obj\UART.o</file>
+      <file>$TOOLKIT_DIR$\lib\dl7M_tlf.a</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
     </outputs>
     <file>
-      <name>$PROJ_DIR$\..\..\Board\src\FIRE_MK60_conf.c</name>
+      <name>$PROJ_DIR$\..\..\Chip\src\MK60_mcg.c</name>
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 57</file>
+          <file> 105</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 68</file>
+          <file> 102</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 118 145 54 154</file>
+          <file> 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 61</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 118 145 54 154</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\App\main.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 135</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 151</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 53 71 76 110 118 113 90 64 150 73 154 98 144 67 112 143 2 131 46 56 40 100 54 145 121 129</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Board\src\FIRE_key.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 119</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 109</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 76 110 145</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 76 110 145</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Board\src\FIRE_LED.C</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 79</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 83</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 76 110 54</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 76 110 54</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\App\MK60_it.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 74</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 158</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 53 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 71 76 110 118 113 90 64 150 73 154 98 144 67 112 143 2 131 46 56 40 100 54 145 121 129 148</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 53 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 71 76 110 118 113 90 64 150 73 154 98 144 67 112 143 2 131 46 56 40 100 54 145 121 129 148</file>
+          <file> 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 61</file>
         </tool>
       </inputs>
     </file>
@@ -283,30 +195,7 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 155</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 97</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 73</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 73</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\MK60_SysTick.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 5</file>
+          <file> 116</file>
         </tool>
         <tool>
           <name>ICCARM</name>
@@ -316,305 +205,43 @@
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 113</file>
+          <file> 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 49</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 113</file>
+          <file> 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 49</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\MK60_adc.c</name>
+      <name>$PROJ_DIR$\..\..\Board\src\FIRE_MK60_conf.c</name>
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 157</file>
+          <file> 90</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 52</file>
+          <file> 79</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 67</file>
+          <file> 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 141 129 67 107</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 67</file>
+          <file> 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 141 129 67 107</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\MK60_wdog.c</name>
+      <name>$PROJ_DIR$\..\..\Board\src\FIRE_LED.C</name>
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 115</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 107</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 71</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 71</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Board\src\FIRE_MMA7455.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 82</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 104</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 64 121</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 64 121</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Board\src\FIRE_SCCB.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 139</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 43</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 76 110 144</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 76 110 144</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\IAR\startup_MK60DZ10.s</name>
-      <outputs>
-        <tool>
-          <name>AARM</name>
-          <file> 51</file>
-        </tool>
-      </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\MK60_spi.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 146</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 75</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 150</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 150</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\IAR\system_MK60DZ10.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 81</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 50</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 118 71</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 118 71</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\misc.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 0</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 55</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 118</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 118</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\MK60_port.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 44</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 124</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 53 71 76 110 118 113 90 64 150 73 154 98 144 67 112 143 2 131 46 56 40 100 54 145 121 129</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 53 71 76 110 118 113 90 64 150 73 154 98 144 67 112 143 2 131 46 56 40 100 54 145 121 129</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\MK60_uart.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 49</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 141</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 118</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 118</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\vectors.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 77</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 128</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 88 148 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 88 148 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Board\src\SYN6288.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 87</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 92</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 40 118</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 40 118</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\MK60_DWT.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 47</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 149</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\MK60_flash.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 102</file>
+          <file> 54</file>
         </tool>
         <tool>
           <name>ICCARM</name>
@@ -624,11 +251,11 @@
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 154 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106</file>
+          <file> 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 94 142 67</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 154 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106</file>
+          <file> 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 94 142 67</file>
         </tool>
       </inputs>
     </file>
@@ -637,21 +264,113 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 62</file>
+          <file> 48</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 136</file>
+          <file> 109</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 76 110 150 129</file>
+          <file> 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 94 142 104 138</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 76 110 150 129</file>
+          <file> 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 94 142 104 138</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Board\src\UART.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 117</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 157</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 87 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 69 94 142 141 139 61 92 104 49 107 111 156 43 124 131 3 112 71 86 74 146 67 129 144 138</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 87 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 69 94 142 141 139 61 92 104 49 107 111 156 43 124 131 3 112 71 86 74 146 67 129 144 138</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Board\src\SYN6288.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 130</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 108</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 74 141</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 74 141</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Chip\src\misc.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 2</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 82</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 141</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 141</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Chip\src\MK60_adc.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 96</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 80</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 43</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 43</file>
         </tool>
       </inputs>
     </file>
@@ -660,112 +379,20 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 137</file>
+          <file> 149</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 95</file>
+          <file> 65</file>
         </tool>
       </outputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\MK60_dma.c</name>
+      <name>$PROJ_DIR$\..\..\Board\src\FIRE_SCCB.c</name>
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 58</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 70</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 76 110 98</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 76 110 98</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\MK60_ftm.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 61</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 133</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 112</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 112</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\MK60_gpio.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 142</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 140</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 76 110</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 76 110</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\MK60_i2c.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 138</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 152</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 64</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 64</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\MK60_lptmr.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 116</file>
+          <file> 121</file>
         </tool>
         <tool>
           <name>ICCARM</name>
@@ -775,75 +402,43 @@
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 90</file>
+          <file> 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 94 142 156</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 90</file>
+          <file> 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 94 142 156</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\Board\src\UART.c</name>
+      <name>$PROJ_DIR$\..\..\Chip\src\MK60_DWT.c</name>
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 130</file>
+          <file> 83</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 114</file>
+          <file> 126</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 53 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 71 76 110 118 113 90 64 150 73 154 98 144 67 112 143 2 131 46 56 40 100 54 145 121 129</file>
+          <file> 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 53 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 71 76 110 118 113 90 64 150 73 154 98 144 67 112 143 2 131 46 56 40 100 54 145 121 129</file>
+          <file> 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\MK60_mcg.c</name>
+      <name>$PROJ_DIR$\..\..\Chip\src\MK60_flash.c</name>
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 156</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 134</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 90</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 90</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>[ROOT_NODE]</name>
-      <outputs>
-        <tool>
-          <name>ILINK</name>
-          <file> 72 96</file>
-        </tool>
-      </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\lcd.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 137</file>
+          <file> 125</file>
         </tool>
         <tool>
           <name>ICCARM</name>
@@ -853,30 +448,435 @@
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 123 76 110</file>
+          <file> 107 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 21 120 94 41 105 80 89 69 147 48 84 153 99 66 65 59 101 122 132 60 126 63 85 127 108 3 7 103 125 93 42 4 106 123 76 110</file>
+          <file> 107 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100</file>
         </tool>
       </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Chip\src\MK60_gpio.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 110</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 113</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 94 142</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 94 142</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Chip\src\MK60_i2c.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 119</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 101</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 92</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 92</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Chip\src\MK60_spi.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 122</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 51</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 104</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 104</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Chip\src\MK60_port.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 75</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 127</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 87 69 94 142 141 139 61 92 104 49 107 111 156 43 124 131 3 112 71 86 74 146 67 129 144 138</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 87 69 94 142 141 139 61 92 104 49 107 111 156 43 124 131 3 112 71 86 74 146 67 129 144 138</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Chip\src\MK60_wdog.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 133</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 103</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 69</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 69</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Chip\src\IAR\startup_MK60DZ10.s</name>
+      <outputs>
+        <tool>
+          <name>AARM</name>
+          <file> 72</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Chip\src\MK60_SysTick.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 1</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 62</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 139</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 139</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Chip\src\IAR\system_MK60DZ10.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 57</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 59</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 141 69</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 141 69</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Board\src\FIRE_MMA7455.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 77</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 140</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 92 144</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 92 144</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Chip\src\MK60_ftm.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 63</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 114</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 124</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 124</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Chip\src\MK60_dma.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 85</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 76</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 94 142 111</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 94 142 111</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Chip\src\vectors.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 44</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 134</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 46 106 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 46 106 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Chip\src\MK60_uart.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 88</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 128</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 141</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 141</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Chip\src\MK60_lptmr.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 143</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 64</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 61</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 61</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\App\main.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 120</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 152</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 87 69 94 142 141 139 61 92 104 49 107 111 156 43 124 131 3 112 71 86 74 146 67 129 144 138</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\App\MK60_it.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 42</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 73</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 87 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 69 94 142 141 139 61 92 104 49 107 111 156 43 124 131 3 112 71 86 74 146 67 129 144 138 106</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 87 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 69 94 142 141 139 61 92 104 49 107 111 156 43 124 131 3 112 71 86 74 146 67 129 144 138 106</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Board\src\FIRE_key.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 148</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 98</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 94 142 129</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 94 142 129</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 55 60</file>
+        </tool>
+      </outputs>
     </file>
     <file>
       <name>$PROJ_DIR$\DZ10_Debug\Exe\fire_Kinetis.out</name>
       <outputs>
         <tool>
           <name>ILINK</name>
-          <file> 72</file>
+          <file> 55</file>
         </tool>
         <tool>
           <name>OBJCOPY</name>
-          <file> 159</file>
+          <file> 81</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ILINK</name>
-          <file> 111 109 83 68 104 136 43 1 95 151 55 52 70 149 39 133 140 152 158 45 134 97 124 75 78 141 107 51 92 50 114 128 86 26 117</file>
+          <file> 154 98 39 79 140 109 45 0 65 152 82 80 76 126 95 114 113 101 73 64 102 78 127 51 62 128 103 72 108 59 157 134 56 8 158</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Chip\src\lcd.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 149</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 65</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 136 94 142</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 22 137 58 70 159 53 52 91 132 41 47 123 153 40 97 84 155 135 118 93 147 68 50 150 145 5 32 151 99 66 89 4 100 136 94 142</file>
         </tool>
       </inputs>
     </file>
@@ -894,262 +894,182 @@
     <outputs>
       <file>$PROJ_DIR$\..\..\Lib\CMSIS\iar_cortexM4l_math.a</file>
       <file>$PROJ_DIR$\..\..\Board\inc\FIRE_camera.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\xtgmath.h</file>
       <file>$PROJ_DIR$\..\..\Chip\inc\MK60_port.h</file>
-      <file>$PROJ_DIR$\..\..\Board\src\FIRE_MK60_conf.c</file>
-      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_MK60_conf.h</file>
-      <file>$PROJ_DIR$\..\..\App\main.c</file>
-      <file>$PROJ_DIR$\..\..\Board\src\FIRE_key.c</file>
-      <file>$PROJ_DIR$\..\..\Board\src\FIRE_LED.C</file>
-      <file>$PROJ_DIR$\..\..\App\MK60_it.c</file>
+      <file>$TOOLKIT_DIR$\inc\c\xtgmath.h</file>
+      <file>$PROJ_DIR$\..\..\Chip\src\MK60_mcg.c</file>
       <file>$PROJ_DIR$\..\..\Chip\src\MK60_PIT.c</file>
-      <file>$PROJ_DIR$\..\..\Chip\src\MK60_SysTick.c</file>
-      <file>$PROJ_DIR$\..\..\Chip\src\MK60_adc.c</file>
-      <file>$PROJ_DIR$\..\..\Chip\src\MK60_wdog.c</file>
-      <file>$PROJ_DIR$\..\..\Board\src\FIRE_MMA7455.c</file>
-      <file>$PROJ_DIR$\..\..\Board\src\FIRE_SCCB.c</file>
-      <file>$PROJ_DIR$\..\..\Chip\src\IAR\startup_MK60DZ10.s</file>
-      <file>$PROJ_DIR$\..\..\Chip\src\MK60_spi.c</file>
-      <file>$PROJ_DIR$\..\..\Chip\src\IAR\system_MK60DZ10.c</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\common.h</file>
-      <file>$PROJ_DIR$\..\..\Chip\src\misc.c</file>
-      <file>$PROJ_DIR$\..\..\Chip\src\MK60_port.c</file>
-      <file>$PROJ_DIR$\..\..\Chip\src\MK60_uart.c</file>
-      <file>$PROJ_DIR$\..\..\Chip\src\vectors.c</file>
+      <file>$PROJ_DIR$\..\..\Board\src\FIRE_MK60_conf.c</file>
+      <file>$PROJ_DIR$\..\..\Board\src\FIRE_LED.C</file>
+      <file>$PROJ_DIR$\..\..\Board\src\FIRE_NRF24L0.c</file>
+      <file>$PROJ_DIR$\..\..\Board\src\UART.c</file>
       <file>$PROJ_DIR$\..\..\Board\src\SYN6288.c</file>
+      <file>$PROJ_DIR$\..\..\Chip\src\misc.c</file>
+      <file>$PROJ_DIR$\..\..\Chip\src\MK60_adc.c</file>
+      <file>$PROJ_DIR$\..\..\Board\src\lcd.c</file>
+      <file>$PROJ_DIR$\..\..\Board\src\FIRE_SCCB.c</file>
       <file>$PROJ_DIR$\..\..\Chip\src\MK60_DWT.c</file>
       <file>$PROJ_DIR$\..\..\Chip\src\MK60_flash.c</file>
-      <file>$PROJ_DIR$\..\..\Board\src\FIRE_NRF24L0.c</file>
-      <file>$PROJ_DIR$\..\..\Board\src\lcd.c</file>
-      <file>$PROJ_DIR$\..\..\Chip\src\MK60_dma.c</file>
-      <file>$PROJ_DIR$\..\..\Chip\src\MK60_ftm.c</file>
       <file>$PROJ_DIR$\..\..\Chip\src\MK60_gpio.c</file>
       <file>$PROJ_DIR$\..\..\Chip\src\MK60_i2c.c</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\common.h</file>
+      <file>$PROJ_DIR$\..\..\Chip\src\MK60_spi.c</file>
+      <file>$PROJ_DIR$\..\..\Chip\src\MK60_port.c</file>
+      <file>$PROJ_DIR$\..\..\Chip\src\MK60_wdog.c</file>
+      <file>$PROJ_DIR$\..\..\Chip\src\IAR\startup_MK60DZ10.s</file>
+      <file>$PROJ_DIR$\..\..\Chip\src\MK60_SysTick.c</file>
+      <file>$PROJ_DIR$\..\..\Chip\src\IAR\system_MK60DZ10.c</file>
+      <file>$PROJ_DIR$\..\..\Board\src\FIRE_MMA7455.c</file>
+      <file>$PROJ_DIR$\..\..\Chip\src\MK60_ftm.c</file>
+      <file>$PROJ_DIR$\..\..\Chip\src\MK60_dma.c</file>
+      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_MK60_conf.h</file>
+      <file>$PROJ_DIR$\..\..\Chip\src\vectors.c</file>
+      <file>$PROJ_DIR$\..\..\Chip\src\MK60_uart.c</file>
       <file>$PROJ_DIR$\..\..\Chip\src\MK60_lptmr.c</file>
-      <file>$PROJ_DIR$\..\..\Board\src\UART.c</file>
-      <file>$PROJ_DIR$\..\..\Chip\src\MK60_mcg.c</file>
-      <file>$PROJ_DIR$\..\..\Board\inc\SYN6288.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
-      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_PORT_cfg.h</file>
-      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_OV7725_REG.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
-      <file>$PROJ_DIR$\..\..\App\Inc\include.h</file>
-      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_LED.H</file>
-      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_OV7725_Wolf.h</file>
-      <file>$PROJ_DIR$\..\..\Lib\CMSIS\Inc\arm_math.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\cmsis_iar.h</file>
-      <file>$PROJ_DIR$\..\..\Lib\CMSIS\Inc\core_cmFunc.h</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_i2c.h</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\misc.h</file>
+      <file>$PROJ_DIR$\..\..\App\main.c</file>
+      <file>$PROJ_DIR$\..\..\App\MK60_it.c</file>
+      <file>$PROJ_DIR$\..\..\Board\src\FIRE_key.c</file>
       <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
       <file>$PROJ_DIR$\..\..\Chip\inc\MK60_adc.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_wdog.h</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_PIT.h</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_gpio.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Full.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\ystdio.h</file>
-      <file>$PROJ_DIR$\..\..\Lib\CMSIS\Inc\core_cm4_simd.h</file>
-      <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
       <file>$PROJ_DIR$\..\..\Chip\inc\vectors.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ystdio.h</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_PIT.h</file>
+      <file>$PROJ_DIR$\..\..\Lib\CMSIS\Inc\core_cm4_simd.h</file>
       <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_lptmr.h</file>
-      <file>$PROJ_DIR$\..\..\Chip\src\lcd.c</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\IAR\system_MK60DZ10.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Full.h</file>
+      <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
       <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_dma.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
-      <file>$PROJ_DIR$\..\..\Board\inc\lcd.h</file>
-      <file>$PROJ_DIR$\..\..\Lib\CMSIS\Inc\core_cm4.h</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_DWT.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_mcg.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\ymath.h</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_gpio_cfg.h</file>
-      <file>$PROJ_DIR$\config files\fire_ROM_K60N512.icf</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_FTM.h</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_SysTick.h</file>
-      <file>$TOOLKIT_DIR$\lib\dl7M_tlf.a</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_uart.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
-      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_MMA7455.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\lcd.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\math.h</file>
-      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_NRF24L0.h</file>
-      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_OV7725_Eagle.h</file>
-      <file>$PROJ_DIR$\..\..\Lib\CMSIS\Inc\core_cmInstr.h</file>
-      <file>$PROJ_DIR$\..\..\Board\inc\UART.h</file>
-      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_SCCB.h</file>
-      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_key.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
-      <file>$PROJ_DIR$\..\..\App\Inc\MK60_it.h</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_spi.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\string.h</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_flash.h</file>
-      <file>$PROJ_DIR$\FX15_Debug\List\fire_Kinetis.map</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_lptmr.h</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\IAR\system_MK60DZ10.h</file>
+      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_LED.H</file>
+      <file>$PROJ_DIR$\..\..\Lib\CMSIS\Inc\core_cmFunc.h</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_wdog.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_OV7725_REG.h</file>
+      <file>$PROJ_DIR$\..\..\Board\inc\SYN6288.h</file>
+      <file>$PROJ_DIR$\..\..\Lib\CMSIS\Inc\arm_math.h</file>
+      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_OV7725_Wolf.h</file>
+      <file>$PROJ_DIR$\..\..\App\Inc\include.h</file>
+      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_PORT_cfg.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_i2c.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\cmsis_iar.h</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_gpio.h</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\misc.h</file>
+      <file>$PROJ_DIR$\FX15_Debug\Obj\SYN6288.pbi</file>
+      <file>$PROJ_DIR$\FX15_Debug\Obj\system_MK60DZ10.pbi</file>
+      <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_i2c.pbi</file>
+      <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_it.o</file>
+      <file>$PROJ_DIR$\FX15_Debug\Obj\startup_MK60DZ10.o</file>
       <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_spi.pbi</file>
+      <file>$PROJ_DIR$\FX15_Debug\Obj\misc.pbi</file>
+      <file>$PROJ_DIR$\FX15_Debug\Obj\UART.pbi</file>
+      <file>$PROJ_DIR$\FX15_Debug\Obj\lcd.pbi</file>
+      <file>$PROJ_DIR$\FX15_Debug\Obj\system_MK60DZ10.o</file>
+      <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_flash.pbi</file>
+      <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_dma.o</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\kinetis\MK60F15.h</file>
+      <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_PIT.pbi</file>
+      <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_mcg.o</file>
+      <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_adc.o</file>
+      <file>$PROJ_DIR$\FX15_Debug\List\fire_Kinetis.map</file>
+      <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_it.pbi</file>
+      <file>$PROJ_DIR$\FX15_Debug\Obj\FIRE_NRF24L0.pbi</file>
+      <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_mcg.pbi</file>
+      <file>$PROJ_DIR$\FX15_Debug\Obj\FIRE_SCCB.o</file>
+      <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_PIT.o</file>
+      <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_adc.pbi</file>
+      <file>$PROJ_DIR$\FX15_Debug\Exe\fire_Kinetis.hex</file>
+      <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_SysTick.pbi</file>
+      <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_wdog.pbi</file>
+      <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_spi.o</file>
+      <file>$PROJ_DIR$\FX15_Debug\Obj\FIRE_MMA7455.o</file>
+      <file>$PROJ_DIR$\FX15_Debug\Obj\misc.o</file>
+      <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_ftm.pbi</file>
+      <file>$PROJ_DIR$\FX15_Debug\Obj\FIRE_LED.o</file>
+      <file>$PROJ_DIR$\FX15_Debug\Obj\FIRE_MK60_conf.o</file>
+      <file>$PROJ_DIR$\FX15_Debug\Obj\FIRE_MMA7455.pbi</file>
+      <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_uart.pbi</file>
+      <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_gpio.pbi</file>
+      <file>$PROJ_DIR$\FX15_Debug\Obj\FIRE_key.o</file>
       <file>$PROJ_DIR$\FX15_Debug\Obj\lcd.o</file>
       <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_i2c.o</file>
       <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_lptmr.o</file>
-      <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_it.pbi</file>
-      <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_wdog.o</file>
-      <file>$PROJ_DIR$\FX15_Debug\Obj\vectors.pbi</file>
-      <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_DWT.o</file>
-      <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_uart.pbi</file>
-      <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_flash.pbi</file>
-      <file>$PROJ_DIR$\FX15_Debug\Exe\fire_Kinetis.out</file>
-      <file>$TOOLKIT_DIR$\lib\m7M_tlv.a</file>
-      <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_port.o</file>
-      <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_mcg.o</file>
-      <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_DWT.pbi</file>
-      <file>$PROJ_DIR$\FX15_Debug\Obj\main.o</file>
-      <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_SysTick.o</file>
-      <file>$PROJ_DIR$\FX15_Debug\Obj\misc.pbi</file>
-      <file>$PROJ_DIR$\FX15_Debug\Obj\FIRE_SCCB.pbi</file>
-      <file>$PROJ_DIR$\FX15_Debug\Obj\FIRE_key.pbi</file>
-      <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_it.o</file>
-      <file>$PROJ_DIR$\FX15_Debug\Obj\fire_Kinetis.pbd</file>
-      <file>$PROJ_DIR$\FX15_Debug\Obj\FIRE_key.o</file>
-      <file>$PROJ_DIR$\FX15_Debug\Obj\FIRE_NRF24L0.pbi</file>
-      <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_gpio.pbi</file>
       <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_flash.o</file>
-      <file>$PROJ_DIR$\FX15_Debug\Obj\startup_MK60DZ10.o</file>
-      <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_ftm.o</file>
-      <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_PIT.o</file>
-      <file>$PROJ_DIR$\FX15_Debug\Obj\FIRE_MMA7455.pbi</file>
-      <file>$PROJ_DIR$\FX15_Debug\Obj\FIRE_MMA7455.o</file>
-      <file>$PROJ_DIR$\FX15_Debug\Obj\UART.pbi</file>
-      <file>$PROJ_DIR$\FX15_Debug\Obj\FIRE_NRF24L0.o</file>
-      <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_PIT.pbi</file>
-      <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_wdog.pbi</file>
-      <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_dma.o</file>
-      <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_mcg.pbi</file>
-      <file>$PROJ_DIR$\FX15_Debug\Obj\FIRE_SCCB.o</file>
-      <file>$PROJ_DIR$\FX15_Debug\Obj\vectors.o</file>
-      <file>$PROJ_DIR$\FX15_Debug\Obj\misc.o</file>
-      <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_adc.o</file>
-      <file>$PROJ_DIR$\FX15_Debug\Obj\FIRE_MK60_conf.o</file>
-      <file>$PROJ_DIR$\FX15_Debug\Obj\lcd.pbi</file>
-      <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_spi.o</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\kinetis\MK60F15.h</file>
       <file>$PROJ_DIR$\FX15_Debug\Obj\UART.o</file>
-      <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_SysTick.pbi</file>
-      <file>$PROJ_DIR$\FX15_Debug\Obj\FIRE_LED.o</file>
-      <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_ftm.pbi</file>
-      <file>$PROJ_DIR$\FX15_Debug\Obj\system_MK60DZ10.o</file>
-      <file>$PROJ_DIR$\FX15_Debug\Obj\system_MK60DZ10.pbi</file>
-      <file>$PROJ_DIR$\FX15_Debug\Obj\SYN6288.pbi</file>
-      <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_i2c.pbi</file>
-      <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_adc.pbi</file>
-      <file>$PROJ_DIR$\FX15_Debug\Exe\fire_Kinetis.hex</file>
-      <file>$PROJ_DIR$\FX15_Debug\Obj\FIRE_MK60_conf.pbi</file>
-      <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_gpio.o</file>
+      <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_DWT.pbi</file>
+      <file>$PROJ_DIR$\FX15_Debug\Obj\vectors.pbi</file>
+      <file>$TOOLKIT_DIR$\lib\m7M_tlv.a</file>
+      <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_DWT.o</file>
+      <file>$PROJ_DIR$\FX15_Debug\Obj\FIRE_key.pbi</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_mcg.h</file>
+      <file>$PROJ_DIR$\FX15_Debug\Exe\fire_Kinetis.out</file>
+      <file>$PROJ_DIR$\FX15_Debug\Obj\FIRE_SCCB.pbi</file>
+      <file>$PROJ_DIR$\FX15_Debug\Obj\FIRE_NRF24L0.o</file>
+      <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_ftm.o</file>
+      <file>$PROJ_DIR$\FX15_Debug\Obj\fire_Kinetis.pbd</file>
+      <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_SysTick.o</file>
+      <file>$PROJ_DIR$\FX15_Debug\Obj\main.o</file>
+      <file>$PROJ_DIR$\FX15_Debug\Obj\vectors.o</file>
+      <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_port.o</file>
+      <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_wdog.o</file>
       <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_uart.o</file>
-      <file>$PROJ_DIR$\FX15_Debug\Obj\main.pbi</file>
-      <file>$PROJ_DIR$\FX15_Debug\Obj\FIRE_LED.pbi</file>
       <file>$PROJ_DIR$\FX15_Debug\Obj\SYN6288.o</file>
+      <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_gpio.o</file>
       <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_lptmr.pbi</file>
-      <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_port.pbi</file>
+      <file>$PROJ_DIR$\FX15_Debug\Obj\main.pbi</file>
       <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_dma.pbi</file>
+      <file>$PROJ_DIR$\FX15_Debug\Obj\FIRE_LED.pbi</file>
+      <file>$PROJ_DIR$\FX15_Debug\Obj\FIRE_MK60_conf.pbi</file>
+      <file>$PROJ_DIR$\FX15_Debug\Obj\MK60_port.pbi</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_spi.h</file>
+      <file>$PROJ_DIR$\..\..\App\Inc\MK60_it.h</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_flash.h</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_dma.h</file>
+      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_OV7725_Eagle.h</file>
+      <file>$PROJ_DIR$\..\..\Chip\src\lcd.c</file>
+      <file>$PROJ_DIR$\..\..\Lib\CMSIS\Inc\core_cmInstr.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\string.h</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_FTM.h</file>
+      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_key.h</file>
+      <file>$PROJ_DIR$\..\..\Board\inc\UART.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\lcd.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
+      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_NRF24L0.h</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_SysTick.h</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_uart.h</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_gpio_cfg.h</file>
+      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_MMA7455.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ymath.h</file>
+      <file>$PROJ_DIR$\..\..\Board\inc\lcd.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\math.h</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_DWT.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
+      <file>$PROJ_DIR$\config files\fire_ROM_K60N512.icf</file>
+      <file>$PROJ_DIR$\..\..\Lib\CMSIS\Inc\core_cm4.h</file>
+      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_SCCB.h</file>
+      <file>$TOOLKIT_DIR$\lib\dl7M_tlf.a</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
     </outputs>
     <file>
-      <name>$PROJ_DIR$\..\..\Board\src\FIRE_MK60_conf.c</name>
+      <name>$PROJ_DIR$\..\..\Chip\src\MK60_mcg.c</name>
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 152</file>
+          <file> 83</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 138</file>
+          <file> 78</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCARM</name>
-          <file> 19 79 64 37 70 55 60 51 91 40 56 94 66 49 48 44 68 81 87 45 83 46 57 84 72 2 5 69 141 63 38 3 71 78 90 42 95</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\App\main.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 155</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 112</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 19 79 64 37 70 55 60 51 91 40 56 94 66 49 48 44 68 81 87 45 83 46 57 84 72 2 5 69 141 63 38 3 71 41 52 54 73 78 76 61 47 93 53 95 65 89 50 75 88 1 86 39 43 36 67 42 90 80 85</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 19 79 64 37 70 55 60 51 91 40 56 94 66 49 48 44 68 81 87 45 83 46 57 84 72 2 5 69 141 63 38 3 71 41 52 54 73 78 76 61 47 93 53 95 65 89 50 75 88 1 86 39 43 36 67 42 90 80 85</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Board\src\FIRE_key.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 116</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 119</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 19 79 64 37 70 55 60 51 91 40 56 94 66 49 48 44 68 81 87 45 83 46 57 84 72 2 5 69 141 63 38 3 71 54 73 90</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Board\src\FIRE_LED.C</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 156</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 144</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 19 79 64 37 70 55 60 51 91 40 56 94 66 49 48 44 68 81 87 45 83 46 57 84 72 2 5 69 141 63 38 3 71 54 73 42</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\App\MK60_it.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 101</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 117</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 41 19 79 64 37 70 55 60 51 91 40 56 94 66 49 48 44 68 81 87 45 83 46 57 84 72 2 5 69 141 63 38 3 71 52 54 73 78 76 61 47 93 53 95 65 89 50 75 88 1 86 39 43 36 67 42 90 80 85 92</file>
+          <file> 19 144 46 52 160 44 43 59 141 37 40 137 155 36 63 55 157 142 136 61 152 50 42 153 150 3 29 154 76 48 58 2 110 47</file>
         </tool>
       </inputs>
     </file>
@@ -1158,26 +1078,64 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 130</file>
+          <file> 77</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 125</file>
+          <file> 85</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCARM</name>
-          <file> 19 79 64 37 70 55 60 51 91 40 56 94 66 49 48 44 68 81 87 45 83 46 57 84 72 2 5 69 141 63 38 3 71 53</file>
+          <file> 19 144 46 52 160 44 43 59 141 37 40 137 155 36 63 55 157 142 136 61 152 50 42 153 150 3 29 154 76 48 58 2 110 41</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\MK60_SysTick.c</name>
+      <name>$PROJ_DIR$\..\..\Board\src\FIRE_MK60_conf.c</name>
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 143</file>
+          <file> 128</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 95</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 19 144 46 52 160 44 43 59 141 37 40 137 155 36 63 55 157 142 136 61 152 50 42 153 150 3 29 154 76 48 58 2 110 147 139 49 132</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Board\src\FIRE_LED.C</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 127</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 94</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 19 144 46 52 160 44 43 59 141 37 40 137 155 36 63 55 157 142 136 61 152 50 42 153 150 3 29 154 76 48 58 2 110 62 148 49</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Board\src\FIRE_NRF24L0.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 82</file>
         </tool>
         <tool>
           <name>ICCARM</name>
@@ -1187,238 +1145,16 @@
       <inputs>
         <tool>
           <name>ICCARM</name>
-          <file> 19 79 64 37 70 55 60 51 91 40 56 94 66 49 48 44 68 81 87 45 83 46 57 84 72 2 5 69 141 63 38 3 71 76</file>
+          <file> 19 144 46 52 160 44 43 59 141 37 40 137 155 36 63 55 157 142 136 61 152 50 42 153 150 3 29 154 76 48 58 2 110 62 148 130 145</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\MK60_adc.c</name>
+      <name>$PROJ_DIR$\..\..\Board\src\UART.c</name>
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 150</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 137</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 19 79 64 37 70 55 60 51 91 40 56 94 66 49 48 44 68 81 87 45 83 46 57 84 72 2 5 69 141 63 38 3 71 50</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\MK60_wdog.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 131</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 102</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 19 79 64 37 70 55 60 51 91 40 56 94 66 49 48 44 68 81 87 45 83 46 57 84 72 2 5 69 141 63 38 3 71 52</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Board\src\FIRE_MMA7455.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 126</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 127</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 19 79 64 37 70 55 60 51 91 40 56 94 66 49 48 44 68 81 87 45 83 46 57 84 72 2 5 69 141 63 38 3 71 47 80</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Board\src\FIRE_SCCB.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 115</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 134</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 19 79 64 37 70 55 60 51 91 40 56 94 66 49 48 44 68 81 87 45 83 46 57 84 72 2 5 69 141 63 38 3 71 54 73 89</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\IAR\startup_MK60DZ10.s</name>
-      <outputs>
-        <tool>
-          <name>AARM</name>
-          <file> 123</file>
-        </tool>
-      </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\MK60_spi.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 97</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 140</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 19 79 64 37 70 55 60 51 91 40 56 94 66 49 48 44 68 81 87 45 83 46 57 84 72 2 5 69 141 63 38 3 71 93</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\IAR\system_MK60DZ10.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 147</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 146</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 19 79 64 37 70 55 60 51 91 40 56 94 66 49 48 44 68 81 87 45 83 46 57 84 72 2 5 69 141 63 38 3 71 78 52</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\misc.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 114</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 136</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 19 79 64 37 70 55 60 51 91 40 56 94 66 49 48 44 68 81 87 45 83 46 57 84 72 2 5 69 141 63 38 3 71 78</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\MK60_port.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 159</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 109</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 19 79 64 37 70 55 60 51 91 40 56 94 66 49 48 44 68 81 87 45 83 46 57 84 72 2 5 69 141 63 38 3 71 41 52 54 73 78 76 61 47 93 53 95 65 89 50 75 88 1 86 39 43 36 67 42 90 80 85</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 19 79 64 37 70 55 60 51 91 40 56 94 66 49 48 44 68 81 87 45 83 46 57 84 72 2 5 69 141 63 38 3 71 41 52 54 73 78 76 61 47 93 53 95 65 89 50 75 88 1 86 39 43 36 67 42 90 80 85</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\MK60_uart.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 105</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 154</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 19 79 64 37 70 55 60 51 91 40 56 94 66 49 48 44 68 81 87 45 83 46 57 84 72 2 5 69 141 63 38 3 71 78</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\vectors.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 103</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 135</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 59 92 19 79 64 37 70 55 60 51 91 40 56 94 66 49 48 44 68 81 87 45 83 46 57 84 72 2 5 69 141 63 38 3 71</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Board\src\SYN6288.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 148</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 157</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 19 79 64 37 70 55 60 51 91 40 56 94 66 49 48 44 68 81 87 45 83 46 57 84 72 2 5 69 141 63 38 3 71 36 78</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\MK60_DWT.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 111</file>
+          <file> 71</file>
         </tool>
         <tool>
           <name>ICCARM</name>
@@ -1428,16 +1164,16 @@
       <inputs>
         <tool>
           <name>ICCARM</name>
-          <file> 19 79 64 37 70 55 60 51 91 40 56 94 66 49 48 44 68 81 87 45 83 46 57 84 72 2 5 69 141 63 38 3 71</file>
+          <file> 57 19 144 46 52 160 44 43 59 141 37 40 137 155 36 63 55 157 142 136 61 152 50 42 153 150 3 29 154 76 48 58 2 110 51 62 148 147 146 47 60 130 41 132 133 158 38 138 140 1 134 53 56 54 151 49 139 149 145</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\MK60_flash.c</name>
+      <name>$PROJ_DIR$\..\..\Board\src\SYN6288.c</name>
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 106</file>
+          <file> 64</file>
         </tool>
         <tool>
           <name>ICCARM</name>
@@ -1447,26 +1183,45 @@
       <inputs>
         <tool>
           <name>ICCARM</name>
-          <file> 95 19 79 64 37 70 55 60 51 91 40 56 94 66 49 48 44 68 81 87 45 83 46 57 84 72 2 5 69 141 63 38 3 71</file>
+          <file> 19 144 46 52 160 44 43 59 141 37 40 137 155 36 63 55 157 142 136 61 152 50 42 153 150 3 29 154 76 48 58 2 110 54 147</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\Board\src\FIRE_NRF24L0.c</name>
+      <name>$PROJ_DIR$\..\..\Chip\src\misc.c</name>
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 120</file>
+          <file> 70</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 129</file>
+          <file> 92</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCARM</name>
-          <file> 19 79 64 37 70 55 60 51 91 40 56 94 66 49 48 44 68 81 87 45 83 46 57 84 72 2 5 69 141 63 38 3 71 54 73 93 85</file>
+          <file> 19 144 46 52 160 44 43 59 141 37 40 137 155 36 63 55 157 142 136 61 152 50 42 153 150 3 29 154 76 48 58 2 110 147</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Chip\src\MK60_adc.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 86</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 79</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 19 144 46 52 160 44 43 59 141 37 40 137 155 36 63 55 157 142 136 61 152 50 42 153 150 3 29 154 76 48 58 2 110 38</file>
         </tool>
       </inputs>
     </file>
@@ -1475,49 +1230,68 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 139</file>
+          <file> 72</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 98</file>
+          <file> 100</file>
         </tool>
       </outputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\MK60_dma.c</name>
+      <name>$PROJ_DIR$\..\..\Board\src\FIRE_SCCB.c</name>
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 160</file>
+          <file> 112</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 132</file>
+          <file> 84</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCARM</name>
-          <file> 19 79 64 37 70 55 60 51 91 40 56 94 66 49 48 44 68 81 87 45 83 46 57 84 72 2 5 69 141 63 38 3 71 54 73 65</file>
+          <file> 19 144 46 52 160 44 43 59 141 37 40 137 155 36 63 55 157 142 136 61 152 50 42 153 150 3 29 154 76 48 58 2 110 62 148 158</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\MK60_ftm.c</name>
+      <name>$PROJ_DIR$\..\..\Chip\src\MK60_DWT.c</name>
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 145</file>
+          <file> 105</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 124</file>
+          <file> 108</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCARM</name>
-          <file> 19 79 64 37 70 55 60 51 91 40 56 94 66 49 48 44 68 81 87 45 83 46 57 84 72 2 5 69 141 63 38 3 71 75</file>
+          <file> 19 144 46 52 160 44 43 59 141 37 40 137 155 36 63 55 157 142 136 61 152 50 42 153 150 3 29 154 76 48 58 2 110</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Chip\src\MK60_flash.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 74</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 103</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 132 19 144 46 52 160 44 43 59 141 37 40 137 155 36 63 55 157 142 136 61 152 50 42 153 150 3 29 154 76 48 58 2 110</file>
         </tool>
       </inputs>
     </file>
@@ -1526,17 +1300,17 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 121</file>
+          <file> 98</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 153</file>
+          <file> 123</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCARM</name>
-          <file> 19 79 64 37 70 55 60 51 91 40 56 94 66 49 48 44 68 81 87 45 83 46 57 84 72 2 5 69 141 63 38 3 71 54 73</file>
+          <file> 19 144 46 52 160 44 43 59 141 37 40 137 155 36 63 55 157 142 136 61 152 50 42 153 150 3 29 154 76 48 58 2 110 62 148</file>
         </tool>
       </inputs>
     </file>
@@ -1545,7 +1319,290 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 149</file>
+          <file> 66</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 101</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 19 144 46 52 160 44 43 59 141 37 40 137 155 36 63 55 157 142 136 61 152 50 42 153 150 3 29 154 76 48 58 2 110 60</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Chip\src\MK60_spi.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 69</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 90</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 19 144 46 52 160 44 43 59 141 37 40 137 155 36 63 55 157 142 136 61 152 50 42 153 150 3 29 154 76 48 58 2 110 130</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Chip\src\MK60_port.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 129</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 119</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 19 144 46 52 160 44 43 59 141 37 40 137 155 36 63 55 157 142 136 61 152 50 42 153 150 3 29 154 76 48 58 2 110 57 51 62 148 147 146 47 60 130 41 132 133 158 38 138 140 1 134 53 56 54 151 49 139 149 145</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 19 144 46 52 160 44 43 59 141 37 40 137 155 36 63 55 157 142 136 61 152 50 42 153 150 3 29 154 76 48 58 2 110 57 51 62 148 147 146 47 60 130 41 132 133 158 38 138 140 1 134 53 56 54 151 49 139 149 145</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Chip\src\MK60_wdog.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 89</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 120</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 19 144 46 52 160 44 43 59 141 37 40 137 155 36 63 55 157 142 136 61 152 50 42 153 150 3 29 154 76 48 58 2 110 51</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Chip\src\IAR\startup_MK60DZ10.s</name>
+      <outputs>
+        <tool>
+          <name>AARM</name>
+          <file> 68</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Chip\src\MK60_SysTick.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 88</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 116</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 19 144 46 52 160 44 43 59 141 37 40 137 155 36 63 55 157 142 136 61 152 50 42 153 150 3 29 154 76 48 58 2 110 146</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Chip\src\IAR\system_MK60DZ10.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 65</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 73</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 19 144 46 52 160 44 43 59 141 37 40 137 155 36 63 55 157 142 136 61 152 50 42 153 150 3 29 154 76 48 58 2 110 147 51</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Board\src\FIRE_MMA7455.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 96</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 91</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 19 144 46 52 160 44 43 59 141 37 40 137 155 36 63 55 157 142 136 61 152 50 42 153 150 3 29 154 76 48 58 2 110 60 149</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Chip\src\MK60_ftm.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 93</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 114</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 19 144 46 52 160 44 43 59 141 37 40 137 155 36 63 55 157 142 136 61 152 50 42 153 150 3 29 154 76 48 58 2 110 138</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Chip\src\MK60_dma.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 126</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 75</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 19 144 46 52 160 44 43 59 141 37 40 137 155 36 63 55 157 142 136 61 152 50 42 153 150 3 29 154 76 48 58 2 110 62 148 133</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Chip\src\vectors.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 106</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 118</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 39 131 19 144 46 52 160 44 43 59 141 37 40 137 155 36 63 55 157 142 136 61 152 50 42 153 150 3 29 154 76 48 58 2 110</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Chip\src\MK60_uart.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 97</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 121</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 19 144 46 52 160 44 43 59 141 37 40 137 155 36 63 55 157 142 136 61 152 50 42 153 150 3 29 154 76 48 58 2 110 147</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Chip\src\MK60_lptmr.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 124</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 102</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 19 144 46 52 160 44 43 59 141 37 40 137 155 36 63 55 157 142 136 61 152 50 42 153 150 3 29 154 76 48 58 2 110 47</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\App\main.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 125</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 117</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 19 144 46 52 160 44 43 59 141 37 40 137 155 36 63 55 157 142 136 61 152 50 42 153 150 3 29 154 76 48 58 2 110 57 51 62 148 147 146 47 60 130 41 132 133 158 38 138 140 1 134 53 56 54 151 49 139 149 145</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 19 144 46 52 160 44 43 59 141 37 40 137 155 36 63 55 157 142 136 61 152 50 42 153 150 3 29 154 76 48 58 2 110 57 51 62 148 147 146 47 60 130 41 132 133 158 38 138 140 1 134 53 56 54 151 49 139 149 145</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\App\MK60_it.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 81</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 67</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 57 19 144 46 52 160 44 43 59 141 37 40 137 155 36 63 55 157 142 136 61 152 50 42 153 150 3 29 154 76 48 58 2 110 51 62 148 147 146 47 60 130 41 132 133 158 38 138 140 1 134 53 56 54 151 49 139 149 145 131</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Board\src\FIRE_key.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 109</file>
         </tool>
         <tool>
           <name>ICCARM</name>
@@ -1555,64 +1612,7 @@
       <inputs>
         <tool>
           <name>ICCARM</name>
-          <file> 19 79 64 37 70 55 60 51 91 40 56 94 66 49 48 44 68 81 87 45 83 46 57 84 72 2 5 69 141 63 38 3 71 47</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\MK60_lptmr.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 158</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 100</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 19 79 64 37 70 55 60 51 91 40 56 94 66 49 48 44 68 81 87 45 83 46 57 84 72 2 5 69 141 63 38 3 71 61</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Board\src\UART.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 128</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 142</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 41 19 79 64 37 70 55 60 51 91 40 56 94 66 49 48 44 68 81 87 45 83 46 57 84 72 2 5 69 141 63 38 3 71 52 54 73 78 76 61 47 93 53 95 65 89 50 75 88 1 86 39 43 36 67 42 90 80 85</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\MK60_mcg.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 133</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 110</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 19 79 64 37 70 55 60 51 91 40 56 94 66 49 48 44 68 81 87 45 83 46 57 84 72 2 5 69 141 63 38 3 71 61</file>
+          <file> 19 144 46 52 160 44 43 59 141 37 40 137 155 36 63 55 157 142 136 61 152 50 42 153 150 3 29 154 76 48 58 2 110 62 148 139</file>
         </tool>
       </inputs>
     </file>
@@ -1621,49 +1621,49 @@
       <outputs>
         <tool>
           <name>ILINK</name>
-          <file> 107 96</file>
+          <file> 111 80</file>
         </tool>
       </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\lcd.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 139</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 98</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 19 79 64 37 70 55 60 51 91 40 56 94 66 49 48 44 68 81 87 45 83 46 57 84 72 2 5 69 141 63 38 3 71 82 54 73</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 19 79 64 37 70 55 60 51 91 40 56 94 66 49 48 44 68 81 87 45 83 46 57 84 72 2 5 69 141 63 38 3 71 82 54 73</file>
-        </tool>
-      </inputs>
     </file>
     <file>
       <name>$PROJ_DIR$\FX15_Debug\Exe\fire_Kinetis.out</name>
       <outputs>
         <tool>
           <name>ILINK</name>
-          <file> 96</file>
+          <file> 80</file>
         </tool>
         <tool>
           <name>OBJCOPY</name>
-          <file> 151</file>
+          <file> 87</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ILINK</name>
-          <file> 74 119 144 138 127 129 134 0 98 112 136 137 132 104 122 124 153 99 117 100 110 125 109 140 113 154 102 123 157 146 142 135 58 108 77</file>
+          <file> 156 99 94 95 91 113 84 0 100 117 92 79 75 108 103 114 123 101 67 102 78 85 119 90 116 121 120 68 122 73 104 118 45 107 159</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Chip\src\lcd.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 72</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 100</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 19 144 46 52 160 44 43 59 141 37 40 137 155 36 63 55 157 142 136 61 152 50 42 153 150 3 29 154 76 48 58 2 110 143 62 148</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 19 144 46 52 160 44 43 59 141 37 40 137 155 36 63 55 157 142 136 61 152 50 42 153 150 3 29 154 76 48 58 2 110 143 62 148</file>
         </tool>
       </inputs>
     </file>
@@ -1672,223 +1672,165 @@
     <name>FX15_Release</name>
     <outputs>
       <file>$PROJ_DIR$\..\..\Board\inc\FIRE_camera.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\xtgmath.h</file>
       <file>$PROJ_DIR$\..\..\Chip\inc\MK60_port.h</file>
-      <file>$PROJ_DIR$\..\..\Board\src\FIRE_MK60_conf.c</file>
-      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_MK60_conf.h</file>
-      <file>$PROJ_DIR$\..\..\App\main.c</file>
-      <file>$PROJ_DIR$\..\..\Board\src\FIRE_key.c</file>
-      <file>$PROJ_DIR$\..\..\Board\src\FIRE_LED.C</file>
-      <file>$PROJ_DIR$\..\..\App\MK60_it.c</file>
+      <file>$TOOLKIT_DIR$\inc\c\xtgmath.h</file>
+      <file>$PROJ_DIR$\..\..\Chip\src\MK60_mcg.c</file>
       <file>$PROJ_DIR$\..\..\Chip\src\MK60_PIT.c</file>
-      <file>$PROJ_DIR$\..\..\Chip\src\MK60_SysTick.c</file>
-      <file>$PROJ_DIR$\..\..\Chip\src\MK60_adc.c</file>
-      <file>$PROJ_DIR$\..\..\Chip\src\MK60_wdog.c</file>
-      <file>$PROJ_DIR$\..\..\Board\src\FIRE_MMA7455.c</file>
-      <file>$PROJ_DIR$\..\..\Board\src\FIRE_SCCB.c</file>
-      <file>$PROJ_DIR$\..\..\Chip\src\IAR\startup_MK60DZ10.s</file>
-      <file>$PROJ_DIR$\..\..\Chip\src\MK60_spi.c</file>
-      <file>$PROJ_DIR$\..\..\Chip\src\IAR\system_MK60DZ10.c</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\common.h</file>
-      <file>$PROJ_DIR$\..\..\Chip\src\misc.c</file>
-      <file>$PROJ_DIR$\..\..\Chip\src\MK60_port.c</file>
-      <file>$PROJ_DIR$\..\..\Chip\src\MK60_uart.c</file>
-      <file>$PROJ_DIR$\..\..\Chip\src\vectors.c</file>
+      <file>$PROJ_DIR$\..\..\Board\src\FIRE_MK60_conf.c</file>
+      <file>$PROJ_DIR$\..\..\Board\src\FIRE_LED.C</file>
+      <file>$PROJ_DIR$\..\..\Board\src\FIRE_NRF24L0.c</file>
+      <file>$PROJ_DIR$\..\..\Board\src\UART.c</file>
       <file>$PROJ_DIR$\..\..\Board\src\SYN6288.c</file>
+      <file>$PROJ_DIR$\..\..\Chip\src\misc.c</file>
+      <file>$PROJ_DIR$\..\..\Chip\src\MK60_adc.c</file>
+      <file>$PROJ_DIR$\..\..\Board\src\lcd.c</file>
+      <file>$PROJ_DIR$\..\..\Board\src\FIRE_SCCB.c</file>
       <file>$PROJ_DIR$\..\..\Chip\src\MK60_DWT.c</file>
       <file>$PROJ_DIR$\..\..\Chip\src\MK60_flash.c</file>
-      <file>$PROJ_DIR$\..\..\Board\src\FIRE_NRF24L0.c</file>
-      <file>$PROJ_DIR$\..\..\Board\src\lcd.c</file>
-      <file>$PROJ_DIR$\..\..\Chip\src\MK60_dma.c</file>
-      <file>$PROJ_DIR$\..\..\Chip\src\MK60_ftm.c</file>
       <file>$PROJ_DIR$\..\..\Chip\src\MK60_gpio.c</file>
       <file>$PROJ_DIR$\..\..\Chip\src\MK60_i2c.c</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\common.h</file>
+      <file>$PROJ_DIR$\..\..\Chip\src\MK60_spi.c</file>
+      <file>$PROJ_DIR$\..\..\Chip\src\MK60_port.c</file>
+      <file>$PROJ_DIR$\..\..\Chip\src\MK60_wdog.c</file>
+      <file>$PROJ_DIR$\..\..\Chip\src\IAR\startup_MK60DZ10.s</file>
+      <file>$PROJ_DIR$\..\..\Chip\src\MK60_SysTick.c</file>
+      <file>$PROJ_DIR$\..\..\Chip\src\IAR\system_MK60DZ10.c</file>
+      <file>$PROJ_DIR$\..\..\Board\src\FIRE_MMA7455.c</file>
+      <file>$PROJ_DIR$\..\..\Chip\src\MK60_ftm.c</file>
+      <file>$PROJ_DIR$\..\..\Chip\src\MK60_dma.c</file>
+      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_MK60_conf.h</file>
+      <file>$PROJ_DIR$\..\..\Chip\src\vectors.c</file>
+      <file>$PROJ_DIR$\..\..\Chip\src\MK60_uart.c</file>
       <file>$PROJ_DIR$\..\..\Chip\src\MK60_lptmr.c</file>
-      <file>$PROJ_DIR$\..\..\Board\src\UART.c</file>
-      <file>$PROJ_DIR$\..\..\Chip\src\MK60_mcg.c</file>
-      <file>$PROJ_DIR$\FX15_Release\Obj\vectors.pbi</file>
-      <file>$PROJ_DIR$\FX15_Release\Obj\SYN6288.pbi</file>
-      <file>$PROJ_DIR$\FX15_Release\Obj\UART.o</file>
-      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_gpio.pbi</file>
-      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_SysTick.pbi</file>
-      <file>$PROJ_DIR$\FX15_Release\Obj\UART.pbi</file>
-      <file>$PROJ_DIR$\FX15_Release\Obj\lcd.o</file>
-      <file>$PROJ_DIR$\FX15_Release\Obj\main.pbi</file>
-      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_port.o</file>
-      <file>$PROJ_DIR$\FX15_Release\Obj\FIRE_NRF24L0.pbi</file>
-      <file>$PROJ_DIR$\..\..\Board\inc\SYN6288.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
-      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_PORT_cfg.h</file>
-      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_OV7725_REG.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
-      <file>$PROJ_DIR$\..\..\App\Inc\include.h</file>
-      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_LED.H</file>
-      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_OV7725_Wolf.h</file>
-      <file>$PROJ_DIR$\..\..\Lib\CMSIS\Inc\arm_math.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\cmsis_iar.h</file>
-      <file>$PROJ_DIR$\..\..\Lib\CMSIS\Inc\core_cmFunc.h</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_i2c.h</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\misc.h</file>
+      <file>$PROJ_DIR$\..\..\App\main.c</file>
+      <file>$PROJ_DIR$\..\..\App\MK60_it.c</file>
+      <file>$PROJ_DIR$\..\..\Board\src\FIRE_key.c</file>
       <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
       <file>$PROJ_DIR$\..\..\Chip\inc\MK60_adc.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_wdog.h</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_PIT.h</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_gpio.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Full.h</file>
       <file>$TOOLKIT_DIR$\inc\c\ystdio.h</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_PIT.h</file>
       <file>$PROJ_DIR$\..\..\Lib\CMSIS\Inc\core_cm4_simd.h</file>
       <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Full.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
       <file>$PROJ_DIR$\..\..\Chip\inc\MK60_lptmr.h</file>
       <file>$PROJ_DIR$\..\..\Chip\inc\IAR\system_MK60DZ10.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_dma.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
-      <file>$PROJ_DIR$\..\..\Board\inc\lcd.h</file>
-      <file>$PROJ_DIR$\..\..\Lib\CMSIS\Inc\core_cm4.h</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_DWT.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_mcg.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\ymath.h</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_gpio_cfg.h</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_FTM.h</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_SysTick.h</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_uart.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
-      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_MMA7455.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\math.h</file>
-      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_NRF24L0.h</file>
-      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_OV7725_Eagle.h</file>
-      <file>$PROJ_DIR$\..\..\Lib\CMSIS\Inc\core_cmInstr.h</file>
-      <file>$PROJ_DIR$\..\..\Board\inc\UART.h</file>
-      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_SCCB.h</file>
-      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_key.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_spi.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\string.h</file>
-      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_flash.h</file>
+      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_LED.H</file>
+      <file>$PROJ_DIR$\..\..\Lib\CMSIS\Inc\core_cmFunc.h</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_wdog.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_OV7725_REG.h</file>
+      <file>$PROJ_DIR$\..\..\Board\inc\SYN6288.h</file>
+      <file>$PROJ_DIR$\..\..\Lib\CMSIS\Inc\arm_math.h</file>
+      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_OV7725_Wolf.h</file>
+      <file>$PROJ_DIR$\..\..\App\Inc\include.h</file>
+      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_PORT_cfg.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_i2c.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\cmsis_iar.h</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_gpio.h</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\misc.h</file>
       <file>$PROJ_DIR$\..\..\Chip\inc\kinetis\MK60F15.h</file>
-      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_flash.pbi</file>
-      <file>$PROJ_DIR$\FX15_Release\Exe\fire_Kinetis.out</file>
-      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_wdog.o</file>
-      <file>$PROJ_DIR$\FX15_Release\Obj\FIRE_MK60_conf.o</file>
-      <file>$PROJ_DIR$\FX15_Release\Obj\FIRE_LED.o</file>
-      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_mcg.o</file>
-      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_uart.pbi</file>
-      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_adc.o</file>
-      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_DWT.o</file>
-      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_lptmr.o</file>
-      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_it.pbi</file>
-      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_SysTick.o</file>
-      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_PIT.pbi</file>
-      <file>$PROJ_DIR$\FX15_Release\Obj\system_MK60DZ10.pbi</file>
-      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_uart.o</file>
-      <file>$PROJ_DIR$\FX15_Release\Obj\FIRE_MMA7455.o</file>
-      <file>$PROJ_DIR$\FX15_Release\Obj\system_MK60DZ10.o</file>
-      <file>$PROJ_DIR$\FX15_Release\Obj\FIRE_MMA7455.pbi</file>
-      <file>$PROJ_DIR$\FX15_Release\Obj\misc.pbi</file>
-      <file>$PROJ_DIR$\FX15_Release\Obj\FIRE_key.o</file>
-      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_spi.pbi</file>
-      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_adc.pbi</file>
-      <file>$PROJ_DIR$\FX15_Release\Obj\misc.o</file>
-      <file>$PROJ_DIR$\FX15_Release\Obj\SYN6288.o</file>
-      <file>$PROJ_DIR$\FX15_Release\Obj\startup_MK60DZ10.o</file>
-      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_gpio.o</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_mcg.h</file>
       <file>$PROJ_DIR$\FX15_Release\Obj\MK60_DWT.pbi</file>
-      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_lptmr.pbi</file>
-      <file>$PROJ_DIR$\FX15_Release\Obj\main.o</file>
-      <file>$PROJ_DIR$\FX15_Release\Obj\FIRE_key.pbi</file>
-      <file>$PROJ_DIR$\FX15_Release\Obj\vectors.o</file>
-      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_it.o</file>
-      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_ftm.o</file>
-      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_wdog.pbi</file>
+      <file>$PROJ_DIR$\FX15_Release\Obj\lcd.o</file>
       <file>$PROJ_DIR$\FX15_Release\Obj\MK60_port.pbi</file>
-      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_ftm.pbi</file>
+      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_lptmr.pbi</file>
+      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_gpio.pbi</file>
+      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_wdog.o</file>
+      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_flash.pbi</file>
+      <file>$PROJ_DIR$\FX15_Release\Obj\SYN6288.pbi</file>
       <file>$PROJ_DIR$\FX15_Release\Obj\FIRE_LED.pbi</file>
+      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_adc.o</file>
+      <file>$PROJ_DIR$\FX15_Release\Obj\UART.pbi</file>
+      <file>$PROJ_DIR$\FX15_Release\Obj\UART.o</file>
+      <file>$PROJ_DIR$\FX15_Release\Obj\FIRE_NRF24L0.pbi</file>
+      <file>$PROJ_DIR$\FX15_Release\Obj\FIRE_MK60_conf.o</file>
+      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_SysTick.o</file>
+      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_spi.pbi</file>
+      <file>$PROJ_DIR$\FX15_Release\Obj\FIRE_MMA7455.o</file>
+      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_adc.pbi</file>
+      <file>$PROJ_DIR$\FX15_Release\Obj\vectors.o</file>
+      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_port.o</file>
+      <file>$PROJ_DIR$\FX15_Release\Obj\main.pbi</file>
+      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_lptmr.o</file>
+      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_uart.o</file>
+      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_uart.pbi</file>
+      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_SysTick.pbi</file>
+      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_mcg.o</file>
+      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_wdog.pbi</file>
+      <file>$PROJ_DIR$\FX15_Release\Obj\FIRE_LED.o</file>
+      <file>$PROJ_DIR$\FX15_Release\Exe\fire_Kinetis.out</file>
+      <file>$PROJ_DIR$\FX15_Release\Obj\vectors.pbi</file>
+      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_ftm.o</file>
+      <file>$PROJ_DIR$\FX15_Release\Obj\system_MK60DZ10.o</file>
+      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_PIT.pbi</file>
+      <file>$PROJ_DIR$\FX15_Release\Obj\FIRE_NRF24L0.o</file>
+      <file>$PROJ_DIR$\FX15_Release\Obj\startup_MK60DZ10.o</file>
+      <file>$PROJ_DIR$\FX15_Release\Obj\FIRE_key.o</file>
+      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_it.o</file>
+      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_it.pbi</file>
       <file>$PROJ_DIR$\FX15_Release\Obj\FIRE_MK60_conf.pbi</file>
       <file>$PROJ_DIR$\FX15_Release\Obj\FIRE_SCCB.o</file>
-      <file>$PROJ_DIR$\FX15_Release\Obj\FIRE_NRF24L0.o</file>
-      <file>$PROJ_DIR$\FX15_Release\Obj\lcd.pbi</file>
-      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_mcg.pbi</file>
-      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_i2c.o</file>
+      <file>$PROJ_DIR$\FX15_Release\Obj\misc.o</file>
+      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_gpio.o</file>
+      <file>$PROJ_DIR$\FX15_Release\Obj\FIRE_MMA7455.pbi</file>
+      <file>$PROJ_DIR$\FX15_Release\Obj\SYN6288.o</file>
+      <file>$PROJ_DIR$\FX15_Release\Obj\main.o</file>
+      <file>$PROJ_DIR$\FX15_Release\Obj\misc.pbi</file>
+      <file>$PROJ_DIR$\FX15_Release\Obj\FIRE_key.pbi</file>
+      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_DWT.o</file>
+      <file>$PROJ_DIR$\FX15_Release\Obj\system_MK60DZ10.pbi</file>
+      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_ftm.pbi</file>
+      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_i2c.pbi</file>
       <file>$PROJ_DIR$\FX15_Release\Obj\MK60_PIT.o</file>
       <file>$PROJ_DIR$\FX15_Release\Obj\MK60_dma.pbi</file>
-      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_flash.o</file>
       <file>$PROJ_DIR$\FX15_Release\Obj\FIRE_SCCB.pbi</file>
+      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_mcg.pbi</file>
+      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_flash.o</file>
       <file>$PROJ_DIR$\FX15_Release\Obj\MK60_spi.o</file>
-      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_i2c.pbi</file>
+      <file>$PROJ_DIR$\FX15_Release\Obj\MK60_i2c.o</file>
       <file>$PROJ_DIR$\FX15_Release\Obj\MK60_dma.o</file>
+      <file>$PROJ_DIR$\FX15_Release\Obj\lcd.pbi</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_spi.h</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_flash.h</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_dma.h</file>
+      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_OV7725_Eagle.h</file>
+      <file>$PROJ_DIR$\..\..\Lib\CMSIS\Inc\core_cmInstr.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\string.h</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_FTM.h</file>
+      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_key.h</file>
+      <file>$PROJ_DIR$\..\..\Board\inc\UART.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
+      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_NRF24L0.h</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_SysTick.h</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_uart.h</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_gpio_cfg.h</file>
+      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_MMA7455.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ymath.h</file>
+      <file>$PROJ_DIR$\..\..\Board\inc\lcd.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\math.h</file>
+      <file>$PROJ_DIR$\..\..\Chip\inc\MK60_DWT.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
+      <file>$PROJ_DIR$\..\..\Lib\CMSIS\Inc\core_cm4.h</file>
+      <file>$PROJ_DIR$\..\..\Board\inc\FIRE_SCCB.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
     </outputs>
     <file>
-      <name>$PROJ_DIR$\..\..\Board\src\FIRE_MK60_conf.c</name>
+      <name>$PROJ_DIR$\..\..\Chip\src\MK60_mcg.c</name>
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 136</file>
+          <file> 117</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 102</file>
-        </tool>
-      </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\App\main.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 42</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 127</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 18 83 70 46 76 64 67 60 94 49 65 96 72 58 57 53 74 85 90 54 86 55 66 87 78 1 4 75 98 69 47 2 77 50 61 63 79 82 81 68 56 95 62 97 71 92 59 80 91 0 89 48 52 45 73 51 93 84 88</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Board\src\FIRE_key.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 128</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 118</file>
-        </tool>
-      </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Board\src\FIRE_LED.C</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 135</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 103</file>
-        </tool>
-      </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\App\MK60_it.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 109</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 130</file>
+          <file> 88</file>
         </tool>
       </outputs>
     </file>
@@ -1897,59 +1839,7 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 111</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 142</file>
-        </tool>
-      </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\MK60_SysTick.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 39</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 110</file>
-        </tool>
-      </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\MK60_adc.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 120</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 106</file>
-        </tool>
-      </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\MK60_wdog.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 132</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 101</file>
-        </tool>
-      </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Board\src\FIRE_MMA7455.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 116</file>
+          <file> 95</file>
         </tool>
         <tool>
           <name>ICCARM</name>
@@ -1958,141 +1848,28 @@
       </outputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\Board\src\FIRE_SCCB.c</name>
+      <name>$PROJ_DIR$\..\..\Board\src\FIRE_MK60_conf.c</name>
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 145</file>
+          <file> 101</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 137</file>
+          <file> 76</file>
         </tool>
       </outputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\IAR\startup_MK60DZ10.s</name>
-      <outputs>
-        <tool>
-          <name>AARM</name>
-          <file> 123</file>
-        </tool>
-      </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\MK60_spi.c</name>
+      <name>$PROJ_DIR$\..\..\Board\src\FIRE_LED.C</name>
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 119</file>
+          <file> 71</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 146</file>
-        </tool>
-      </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\IAR\system_MK60DZ10.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 112</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 115</file>
-        </tool>
-      </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\misc.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 117</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 121</file>
-        </tool>
-      </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\MK60_port.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 133</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 43</file>
-        </tool>
-      </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\MK60_uart.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 105</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 113</file>
-        </tool>
-      </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\vectors.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 35</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 129</file>
-        </tool>
-      </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Board\src\SYN6288.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 36</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 122</file>
-        </tool>
-      </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\MK60_DWT.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 125</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 107</file>
-        </tool>
-      </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\MK60_flash.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 99</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 144</file>
+          <file> 90</file>
         </tool>
       </outputs>
     </file>
@@ -2101,89 +1878,11 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 44</file>
+          <file> 75</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 138</file>
-        </tool>
-      </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Board\src\lcd.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 139</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 41</file>
-        </tool>
-      </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\MK60_dma.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 143</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 148</file>
-        </tool>
-      </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\MK60_ftm.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 134</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 131</file>
-        </tool>
-      </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\MK60_gpio.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 38</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 124</file>
-        </tool>
-      </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\MK60_i2c.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 147</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 141</file>
-        </tool>
-      </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\MK60_lptmr.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 126</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 108</file>
+          <file> 96</file>
         </tool>
       </outputs>
     </file>
@@ -2192,20 +1891,111 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 40</file>
+          <file> 73</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 37</file>
+          <file> 74</file>
         </tool>
       </outputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\Chip\src\MK60_mcg.c</name>
+      <name>$PROJ_DIR$\..\..\Board\src\SYN6288.c</name>
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 140</file>
+          <file> 70</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 106</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Chip\src\misc.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 108</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 103</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Chip\src\MK60_adc.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 80</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 72</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Board\src\lcd.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 122</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 64</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Board\src\FIRE_SCCB.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 116</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 102</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Chip\src\MK60_DWT.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 63</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 110</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Chip\src\MK60_flash.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 69</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 118</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Chip\src\MK60_gpio.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 67</file>
         </tool>
         <tool>
           <name>ICCARM</name>
@@ -2214,11 +2004,221 @@
       </outputs>
     </file>
     <file>
+      <name>$PROJ_DIR$\..\..\Chip\src\MK60_i2c.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 113</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 120</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Chip\src\MK60_spi.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 78</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 119</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Chip\src\MK60_port.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 65</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 82</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Chip\src\MK60_wdog.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 89</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 68</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Chip\src\IAR\startup_MK60DZ10.s</name>
+      <outputs>
+        <tool>
+          <name>AARM</name>
+          <file> 97</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Chip\src\MK60_SysTick.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 87</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 77</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Chip\src\IAR\system_MK60DZ10.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 111</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 94</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Board\src\FIRE_MMA7455.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 105</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 79</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Chip\src\MK60_ftm.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 112</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 93</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Chip\src\MK60_dma.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 115</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 121</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Chip\src\vectors.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 92</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 81</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Chip\src\MK60_uart.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 86</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 85</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Chip\src\MK60_lptmr.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 66</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 84</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\App\main.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 83</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 107</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 18 134 43 49 148 42 41 56 132 36 38 128 145 35 60 52 146 133 127 58 142 47 40 143 140 2 28 144 61 45 55 1 62 54 48 59 138 137 136 44 57 123 39 124 125 147 37 129 131 0 126 50 53 51 141 46 130 139 135</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\App\MK60_it.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 100</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 99</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Board\src\FIRE_key.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 109</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 98</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
       <name>[ROOT_NODE]</name>
       <outputs>
         <tool>
           <name>ILINK</name>
-          <file> 100</file>
+          <file> 91</file>
         </tool>
       </outputs>
     </file>
