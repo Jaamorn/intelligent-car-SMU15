@@ -58,7 +58,7 @@
       
       
       
-    <Wnd0>
+    <Wnd1>
         <Tabs>
           <Tab>
             <Identity>TabID-4233-21431</Identity>
@@ -74,7 +74,7 @@
           </Tab>
         </Tabs>
         
-      <SelectedTab>0</SelectedTab></Wnd0><Wnd3>
+      <SelectedTab>0</SelectedTab></Wnd1><Wnd2>
         <Tabs>
           <Tab>
             <Identity>TabID-14981-21435</Identity>
@@ -86,7 +86,7 @@
           </Tab>
         </Tabs>
         
-      <SelectedTab>0</SelectedTab></Wnd3><Wnd4>
+      <SelectedTab>0</SelectedTab></Wnd2><Wnd6>
         <Tabs>
           <Tab>
             <Identity>TabID-25730-21438</Identity>
@@ -96,7 +96,7 @@
           </Tab>
         </Tabs>
         
-      <SelectedTab>0</SelectedTab></Wnd4><Wnd5>
+      <SelectedTab>0</SelectedTab></Wnd6><Wnd7>
         <Tabs>
           <Tab>
             <Identity>TabID-17616-23227</Identity>
@@ -105,20 +105,20 @@
           </Tab>
         </Tabs>
         
-      <SelectedTab>0</SelectedTab></Wnd5></Windows>
+      <SelectedTab>0</SelectedTab></Wnd7></Windows>
     <Editor>
       
       
       
       
-    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\App\main.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>55</YPos2><SelStart2>1743</SelStart2><SelEnd2>1743</SelEnd2></Tab><ActiveTab>0</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Board\inc\FIRE_PORT_cfg.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>0</YPos2><SelStart2>0</SelStart2><SelEnd2>0</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Board\inc\FIRE_MK60_conf.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>88</YPos2><SelStart2>0</SelStart2><SelEnd2>0</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Board\src\FIRE_MK60_conf.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>201</YPos2><SelStart2>0</SelStart2><SelEnd2>0</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Chip\src\MK60_ftm.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>0</YPos2><SelStart2>0</SelStart2><SelEnd2>0</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Chip\inc\MK60_FTM.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>24</YPos2><SelStart2>828</SelStart2><SelEnd2>828</SelEnd2></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\App\main.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>55</YPos2><SelStart2>1743</SelStart2><SelEnd2>1743</SelEnd2></Tab><ActiveTab>0</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Board\inc\FIRE_PORT_cfg.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>18</YPos2><SelStart2>0</SelStart2><SelEnd2>0</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Board\inc\FIRE_MK60_conf.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>88</YPos2><SelStart2>0</SelStart2><SelEnd2>0</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Board\src\FIRE_MK60_conf.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>201</YPos2><SelStart2>0</SelStart2><SelEnd2>0</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Chip\src\MK60_ftm.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>6</YPos2><SelStart2>0</SelStart2><SelEnd2>0</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Chip\inc\MK60_FTM.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>24</YPos2><SelStart2>828</SelStart2><SelEnd2>828</SelEnd2></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
     <Positions>
       
       
       
       
       
-    <Top><Row0><Sizes><Toolbar-05191398><key>iaridepm.enu1</key></Toolbar-05191398></Sizes></Row0><Row1><Sizes><Toolbar-21BA5C30><key>debuggergui.enu1</key></Toolbar-21BA5C30></Sizes></Row1><Row2><Sizes><Toolbar-21BA5AA0><key>armjlink.enu1</key></Toolbar-21BA5AA0></Sizes></Row2></Top><Left><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>1095</Bottom><Right>526</Right><x>-2</x><y>-2</y><xscreen>531</xscreen><yscreen>307</yscreen><sizeHorzCX>207422</sizeHorzCX><sizeHorzCY>205214</sizeHorzCY><sizeVertCX>206250</sizeVertCX><sizeVertCY>733289</sizeVertCY></Rect></Wnd3></Sizes></Row0></Left><Right><Row0><Sizes><Wnd4><Rect><Top>-2</Top><Left>-2</Left><Bottom>1095</Bottom><Right>552</Right><x>-2</x><y>-2</y><xscreen>531</xscreen><yscreen>307</yscreen><sizeHorzCX>207422</sizeHorzCX><sizeHorzCY>205214</sizeHorzCY><sizeVertCX>216406</sizeVertCX><sizeVertCY>733289</sizeVertCY></Rect></Wnd4></Sizes></Row0><Row1><Sizes><Wnd5><Rect><Top>-2</Top><Left>550</Left><Bottom>1095</Bottom><Right>959</Right><x>550</x><y>-2</y><xscreen>531</xscreen><yscreen>307</yscreen><sizeHorzCX>207422</sizeHorzCX><sizeHorzCY>205214</sizeHorzCY><sizeVertCX>159766</sizeVertCX><sizeVertCY>733289</sizeVertCY></Rect></Wnd5></Sizes></Row1></Right><Bottom><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>305</Bottom><Right>2562</Right><x>-2</x><y>-2</y><xscreen>2564</xscreen><yscreen>307</yscreen><sizeHorzCX>1001562</sizeHorzCX><sizeHorzCY>205214</sizeHorzCY><sizeVertCX>207422</sizeVertCX><sizeVertCY>205214</sizeVertCY></Rect></Wnd0></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+    <Top><Row0><Sizes><Toolbar-058D1398><key>iaridepm.enu1</key></Toolbar-058D1398></Sizes></Row0><Row1><Sizes><Toolbar-14F97B20><key>debuggergui.enu1</key></Toolbar-14F97B20></Sizes></Row1><Row2><Sizes><Toolbar-14F975A8><key>armjlink.enu1</key></Toolbar-14F975A8></Sizes></Row2></Top><Left><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>1095</Bottom><Right>526</Right><x>-2</x><y>-2</y><xscreen>531</xscreen><yscreen>307</yscreen><sizeHorzCX>207422</sizeHorzCX><sizeHorzCY>205214</sizeHorzCY><sizeVertCX>206250</sizeVertCX><sizeVertCY>733289</sizeVertCY></Rect></Wnd2></Sizes></Row0></Left><Right><Row0><Sizes><Wnd6><Rect><Top>-2</Top><Left>-2</Left><Bottom>1095</Bottom><Right>552</Right><x>-2</x><y>-2</y><xscreen>531</xscreen><yscreen>307</yscreen><sizeHorzCX>207422</sizeHorzCX><sizeHorzCY>205214</sizeHorzCY><sizeVertCX>216406</sizeVertCX><sizeVertCY>733289</sizeVertCY></Rect></Wnd6></Sizes></Row0><Row1><Sizes><Wnd7><Rect><Top>-2</Top><Left>550</Left><Bottom>1095</Bottom><Right>959</Right><x>550</x><y>-2</y><xscreen>531</xscreen><yscreen>307</yscreen><sizeHorzCX>207422</sizeHorzCX><sizeHorzCY>205214</sizeHorzCY><sizeVertCX>159766</sizeVertCX><sizeVertCY>733289</sizeVertCY></Rect></Wnd7></Sizes></Row1></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>305</Bottom><Right>2562</Right><x>-2</x><y>-2</y><xscreen>2564</xscreen><yscreen>307</yscreen><sizeHorzCX>1001562</sizeHorzCX><sizeHorzCY>205214</sizeHorzCY><sizeVertCX>207422</sizeVertCX><sizeVertCY>205214</sizeVertCY></Rect></Wnd1></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
   </Desktop>
 </Project>
 

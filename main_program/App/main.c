@@ -29,7 +29,7 @@ void LED_init(void)
 }
 
 
-#define CAMERA_W            280              //定义摄像头图像宽度
+#define CAMERA_W            180              //定义摄像头图像宽度
 #define CAMERA_H            240              //定义摄像头图像高度
 #define CAMERA_R_H          40               //定义摄像头图像高度
 #define CAMERA_SIZE         CAMERA_W*CAMERA_H
@@ -75,11 +75,11 @@ void portc_handler();
 void  main(void)
 {
     /*************驱动程序**********/
-    //FTM_PWM_init(FTM0, FTM_CH1,50, 0);
-    FTM_PWM_init(FTM0, FTM_CH2,50, 1000);
+    FTM_PWM_init(FTM0, FTM_CH1,10000, 0);//A4
+    FTM_PWM_init(FTM0, FTM_CH2,10000, 1000);//A5
   
-    //FTM_PWM_init(FTM0, FTM_CH3,50, 0);
-    //FTM_PWM_init(FTM0, FTM_CH4,50, 1000);
+    FTM_PWM_init(FTM0, FTM_CH3,10000, 0);//A6
+    FTM_PWM_init(FTM0, FTM_CH4,10000, 1000);//A7
   
   
   
@@ -125,7 +125,7 @@ void  main(void)
             uart_putchar(UART4,imgbuff[j][i]);
           }
        }
-       */ 
+      
         /*************液晶屏显示程序**********/
         
         for(int j=0;j<CAMERA_R_H;j++)
@@ -157,7 +157,7 @@ void  main(void)
         
         
         
-        for (int i = 180; i>0; i--)//找左线
+        for (int i = 120; i>0; i--)//找左线
         {
         	if(imgbuff[L][i]-imgbuff[L][i-1]>40 )
         	{
@@ -167,7 +167,7 @@ void  main(void)
         	}
         }
 
-        for (int i = 100; i < CAMERA_W; i++)
+        for (int i = 60; i < CAMERA_W; i++)
         {
         	if(imgbuff[L][i]-imgbuff[L][i+1]>40 )
         	{
@@ -181,14 +181,14 @@ void  main(void)
           POINT_C = (POINT_L+POINT_R)/2;
           LCD_Show_Number(70,7,POINT_C);
         }  
-        else if(FLAG_R = 1,FLAG_L = 0)
+        else if(FLAG_R == 1,FLAG_L == 0)
         {
-          POINT_C = POINT_R - 100;
+          POINT_C = POINT_R - 60;
           LCD_Show_Number(70,4,POINT_R);
         }
-        else if(FLAG_R = 0,FLAG_L = 0)
+        else if(FLAG_R == 0,FLAG_L == 0)
         {
-          POINT_C = POINT_L + 100;
+          POINT_C = POINT_L + 70;
           LCD_Show_Number(70,4,POINT_R);
         }
 
@@ -279,7 +279,7 @@ void  main(void)
         //float K_RIGHT = 1.71;
         //float DUTY_F;
         int DUTY;
-        int MID= 125;//设定参考中点值
+        int MID= 80;//设定参考中点值
         //K_RIGHT = 1.71; 
         FTM_PWM_init(FTM0, FTM_CH0,50,775);   //初始化PWM输出中值 PTC1  775
         if(POINT_C > MID)//右拐
@@ -334,7 +334,7 @@ void portb_handler()
       {
         if(V_Cnt==sz[num])
         {
-          systick_delay(560);
+          systick_delay(450);
           DMA_EN(DMA_CH0);
           num++;
         }

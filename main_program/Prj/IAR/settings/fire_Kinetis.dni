@@ -10,7 +10,7 @@ LimitSize=0
 ByteLimit=50
 [DebugChecksum]
 <<<<<<< HEAD
-Checksum=-495740646
+Checksum=364249978
 =======
 Checksum=266331532
 >>>>>>> parent of 89ad245... 更改图像采集宽度
