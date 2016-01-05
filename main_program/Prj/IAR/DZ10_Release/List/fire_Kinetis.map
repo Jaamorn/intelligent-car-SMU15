@@ -1,0 +1,315 @@
+###############################################################################
+#
+# IAR ELF Linker V7.10.1.6676/W32 for ARM                 05/Jan/2016  15:26:53
+# Copyright 2007-2014 IAR Systems AB.
+#
+#    Output file  =  
+#        C:\Users\jamorn\Desktop\Dev\Github\intelligent-car-SMU15\main_program\Prj\IAR\DZ10_Release\Exe\fire_Kinetis.out
+#    Map file     =  
+#        C:\Users\jamorn\Desktop\Dev\Github\intelligent-car-SMU15\main_program\Prj\IAR\DZ10_Release\List\fire_Kinetis.map
+#    Command line =  
+#        C:\Users\jamorn\Desktop\Dev\Github\intelligent-car-SMU15\main_program\Prj\IAR\DZ10_Release\Obj\FIRE_key.o
+#        C:\Users\jamorn\Desktop\Dev\Github\intelligent-car-SMU15\main_program\Prj\IAR\DZ10_Release\Obj\FIRE_LED.o
+#        C:\Users\jamorn\Desktop\Dev\Github\intelligent-car-SMU15\main_program\Prj\IAR\DZ10_Release\Obj\FIRE_MK60_conf.o
+#        C:\Users\jamorn\Desktop\Dev\Github\intelligent-car-SMU15\main_program\Prj\IAR\DZ10_Release\Obj\FIRE_MMA7455.o
+#        C:\Users\jamorn\Desktop\Dev\Github\intelligent-car-SMU15\main_program\Prj\IAR\DZ10_Release\Obj\FIRE_NRF24L0.o
+#        C:\Users\jamorn\Desktop\Dev\Github\intelligent-car-SMU15\main_program\Prj\IAR\DZ10_Release\Obj\FIRE_SCCB.o
+#        C:\Users\jamorn\Desktop\Dev\Github\intelligent-car-SMU15\main_program\Lib\CMSIS\iar_cortexM4l_math.a
+#        C:\Users\jamorn\Desktop\Dev\Github\intelligent-car-SMU15\main_program\Prj\IAR\DZ10_Release\Obj\lcd.o
+#        C:\Users\jamorn\Desktop\Dev\Github\intelligent-car-SMU15\main_program\Prj\IAR\DZ10_Release\Obj\main.o
+#        C:\Users\jamorn\Desktop\Dev\Github\intelligent-car-SMU15\main_program\Prj\IAR\DZ10_Release\Obj\misc.o
+#        C:\Users\jamorn\Desktop\Dev\Github\intelligent-car-SMU15\main_program\Prj\IAR\DZ10_Release\Obj\MK60_adc.o
+#        C:\Users\jamorn\Desktop\Dev\Github\intelligent-car-SMU15\main_program\Prj\IAR\DZ10_Release\Obj\MK60_dma.o
+#        C:\Users\jamorn\Desktop\Dev\Github\intelligent-car-SMU15\main_program\Prj\IAR\DZ10_Release\Obj\MK60_DWT.o
+#        C:\Users\jamorn\Desktop\Dev\Github\intelligent-car-SMU15\main_program\Prj\IAR\DZ10_Release\Obj\MK60_flash.o
+#        C:\Users\jamorn\Desktop\Dev\Github\intelligent-car-SMU15\main_program\Prj\IAR\DZ10_Release\Obj\MK60_ftm.o
+#        C:\Users\jamorn\Desktop\Dev\Github\intelligent-car-SMU15\main_program\Prj\IAR\DZ10_Release\Obj\MK60_gpio.o
+#        C:\Users\jamorn\Desktop\Dev\Github\intelligent-car-SMU15\main_program\Prj\IAR\DZ10_Release\Obj\MK60_i2c.o
+#        C:\Users\jamorn\Desktop\Dev\Github\intelligent-car-SMU15\main_program\Prj\IAR\DZ10_Release\Obj\MK60_it.o
+#        C:\Users\jamorn\Desktop\Dev\Github\intelligent-car-SMU15\main_program\Prj\IAR\DZ10_Release\Obj\MK60_lptmr.o
+#        C:\Users\jamorn\Desktop\Dev\Github\intelligent-car-SMU15\main_program\Prj\IAR\DZ10_Release\Obj\MK60_mcg.o
+#        C:\Users\jamorn\Desktop\Dev\Github\intelligent-car-SMU15\main_program\Prj\IAR\DZ10_Release\Obj\MK60_PIT.o
+#        C:\Users\jamorn\Desktop\Dev\Github\intelligent-car-SMU15\main_program\Prj\IAR\DZ10_Release\Obj\MK60_port.o
+#        C:\Users\jamorn\Desktop\Dev\Github\intelligent-car-SMU15\main_program\Prj\IAR\DZ10_Release\Obj\MK60_spi.o
+#        C:\Users\jamorn\Desktop\Dev\Github\intelligent-car-SMU15\main_program\Prj\IAR\DZ10_Release\Obj\MK60_SysTick.o
+#        C:\Users\jamorn\Desktop\Dev\Github\intelligent-car-SMU15\main_program\Prj\IAR\DZ10_Release\Obj\MK60_uart.o
+#        C:\Users\jamorn\Desktop\Dev\Github\intelligent-car-SMU15\main_program\Prj\IAR\DZ10_Release\Obj\MK60_wdog.o
+#        C:\Users\jamorn\Desktop\Dev\Github\intelligent-car-SMU15\main_program\Prj\IAR\DZ10_Release\Obj\startup_MK60DZ10.o
+#        C:\Users\jamorn\Desktop\Dev\Github\intelligent-car-SMU15\main_program\Prj\IAR\DZ10_Release\Obj\SYN6288.o
+#        C:\Users\jamorn\Desktop\Dev\Github\intelligent-car-SMU15\main_program\Prj\IAR\DZ10_Release\Obj\system_MK60DZ10.o
+#        C:\Users\jamorn\Desktop\Dev\Github\intelligent-car-SMU15\main_program\Prj\IAR\DZ10_Release\Obj\UART.o
+#        C:\Users\jamorn\Desktop\Dev\Github\intelligent-car-SMU15\main_program\Prj\IAR\DZ10_Release\Obj\vectors.o
+#        -o
+#        C:\Users\jamorn\Desktop\Dev\Github\intelligent-car-SMU15\main_program\Prj\IAR\DZ10_Release\Exe\fire_Kinetis.out
+#        --map
+#        C:\Users\jamorn\Desktop\Dev\Github\intelligent-car-SMU15\main_program\Prj\IAR\DZ10_Release\List\fire_Kinetis.map
+#        --config
+#        "C:\Users\jamorn\Desktop\Dev\Github\intelligent-car-SMU15\main_program\Prj\IAR\config
+#        files\fire_ROM_K60N512.icf" --entry __iar_program_start --redirect
+#        __write=__write_buffered --inline --vfe
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A1":  place at 0x00000000 { ro section .intvec };
+"A2":  place at 0x00000410 { ro section .noinit };
+"P1":  place in [from 0x00000000 to 0x00040000] { ro, block CodeRelocate };
+"P2":  place in [from 0x1fff0410 to 0x20010000] {
+          rw, block CodeRelocateRam, block CSTACK, block HEAP };
+
+  Section              Kind        Address    Size  Object
+  -------              ----        -------    ----  ------
+"A1":                                        0x410
+  .intvec              const    0x00000000   0x410  vectors.o [1]
+                              - 0x00000410   0x410
+
+"P1", part 1 of 2:                             0x0
+  .rodata              const    0x00000410     0x0  zero_init3.o [5]
+
+"A2":                                          0x8
+  .noinit              ro code  0x00000410     0x8  startup_MK60DZ10.o [1]
+                              - 0x00000418     0x8
+
+"P1", part 2 of 2:                          0x124c
+  .text                ro code  0x00000418   0x520  lcd.o [1]
+  .text                ro code  0x00000938   0x32c  main.o [1]
+  .text                ro code  0x00000c64    0x48  MK60_gpio.o [1]
+  .text                ro code  0x00000cac   0x178  MK60_ftm.o [1]
+  .text                ro code  0x00000e24   0x16c  MK60_uart.o [1]
+  .text                ro code  0x00000f90    0x80  MK60_port.o [1]
+  .text                ro code  0x00001010    0x18  misc.o [1]
+  .text                ro code  0x00001028    0xec  MK60_dma.o [1]
+  .text                ro code  0x00001114    0x1c  MK60_SysTick.o [1]
+  Veneer               ro code  0x00001130     0x8  - Linker created -
+  .text                ro code  0x00001138   0x1b4  MK60_mcg.o [1]
+  .data_init                    0x000012ec    0xc4  <Block>
+    Initializer bytes  ro data  0x000012ec    0xc4  <for .data-1>
+  .text                ro code  0x000013b0    0xc0  system_MK60DZ10.o [1]
+  .text                ro code  0x00001470    0x38  MK60_wdog.o [1]
+  .text                ro code  0x000014a8    0x76  ABImemcpy_unaligned.o [5]
+  .text                ro code  0x0000151e    0x22  zero_init3.o [5]
+  .text                ro code  0x00001540     0x6  ABImemclr.o [5]
+  .text                ro code  0x00001548    0x5e  ABImemset.o [5]
+  CodeRelocate                  0x000015a8    0x3c  <Block>
+    Initializer bytes  ro data  0x000015a8    0x3c  <for CodeRelocateRam-1>
+  .text                ro code  0x000015e4    0x28  data_init.o [5]
+  .iar.init_table      const    0x0000160c    0x10  - Linker created -
+  .text                ro code  0x0000161c    0x1a  cmain.o [5]
+  .text                ro code  0x00001636     0x4  exit.o [3]
+  .text                ro code  0x0000163c     0xa  cexit.o [5]
+  .text                ro code  0x00001648     0xc  XXexit.o [5]
+  .text                ro code  0x00001654     0xc  cstartup_M.o [5]
+  .text                ro code  0x00001660     0x4  FIRE_MK60_conf.o [1]
+                              - 0x00001664  0x124c
+
+"P2", part 1 of 2:                           0x100
+  .data                         0x1fff0410    0xc4  <Block>
+    .data-1                     0x1fff0410    0xc4  <Init block>
+      .data            inited   0x1fff0410    0x30  main.o [1]
+      .data            inited   0x1fff0440     0xc  MK60_ftm.o [1]
+      .data            inited   0x1fff044c    0x14  MK60_gpio.o [1]
+      .data            inited   0x1fff0460    0x44  MK60_mcg.o [1]
+      .data            inited   0x1fff04a4     0x4  MK60_mcg.o [1]
+      .data            inited   0x1fff04a8    0x14  MK60_port.o [1]
+      .data            inited   0x1fff04bc    0x18  MK60_uart.o [1]
+  CodeRelocateRam               0x1fff04d4    0x3c  <Block>
+    CodeRelocateRam-1           0x1fff04d4    0x3c  <Init block>
+      .textrw          inited   0x1fff04d4    0x3c  MK60_mcg.o [1]
+                              - 0x1fff0510   0x100
+
+"P2", part 2 of 2:                          0x1d0c
+  .bss                          0x1fff0510  0x1d0c  <Block>
+    .bss               zero     0x1fff0510   0x400  lcd.o [1]
+    .bss               zero     0x1fff0910  0x1900  main.o [1]
+    .bss               zero     0x1fff2210     0xc  system_MK60DZ10.o [1]
+                              - 0x1fff221c  0x1d0c
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address     Size
+          -------     ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x1d0c:
+          0x1fff0510  0x1d0c
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                 ro code  rw code  ro data  rw data
+    ------                 -------  -------  -------  -------
+C:\Users\jamorn\Desktop\Dev\Github\intelligent-car-SMU15\main_program\Prj\IAR\DZ10_Release\Obj: [1]
+    FIRE_MK60_conf.o             4
+    MK60_SysTick.o              28
+    MK60_dma.o                 236
+    MK60_ftm.o                 376                12       12
+    MK60_gpio.o                 72                20       20
+    MK60_mcg.o                 436       60      132       72
+    MK60_port.o                128                20       20
+    MK60_uart.o                364                24       24
+    MK60_wdog.o                 56
+    lcd.o                    1 312                      1 024
+    main.o                     812                48    6 448
+    misc.o                      24
+    startup_MK60DZ10.o           8
+    system_MK60DZ10.o          192                         12
+    vectors.o                                  1 040
+    ---------------------------------------------------------
+    Total:                   4 048       60    1 296    7 632
+
+command line: [2]
+    ---------------------------------------------------------
+    Total:
+
+dl7M_tlf.a: [3]
+    exit.o                       4
+    ---------------------------------------------------------
+    Total:                       4
+
+m7M_tl.a: [4]
+    ---------------------------------------------------------
+    Total:
+
+rt7M_tl.a: [5]
+    ABImemclr.o                  6
+    ABImemcpy_unaligned.o      118
+    ABImemset.o                 94
+    XXexit.o                    12
+    cexit.o                     10
+    cmain.o                     26
+    cstartup_M.o                12
+    data_init.o                 40
+    zero_init3.o                34
+    ---------------------------------------------------------
+    Total:                     352
+
+    Gaps                         6
+    Linker created               8                16
+-------------------------------------------------------------
+    Grand Total:             4 418       60    1 312    7 632
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address    Size  Type      Object
+-----                      -------    ----  ----      ------
+.bss$$Base              0x1fff0510           --   Gb  - Linker created -
+.bss$$Limit             0x1fff221c           --   Gb  - Linker created -
+.data$$Base             0x1fff0410           --   Gb  - Linker created -
+.data$$Limit            0x1fff04d4           --   Gb  - Linker created -
+.data_init$$Base        0x000012ec           --   Gb  - Linker created -
+.data_init$$Limit       0x000013b0           --   Gb  - Linker created -
+?main                   0x0000161d          Code  Gb  cmain.o [5]
+CodeRelocate$$Base      0x000015a8           --   Gb  - Linker created -
+CodeRelocate$$Limit     0x000015e4           --   Gb  - Linker created -
+CodeRelocateRam$$Base   0x1fff04d4           --   Gb  - Linker created -
+CodeRelocateRam$$Limit  0x1fff0510           --   Gb  - Linker created -
+F6x8                    0x00000710   0x228  Data  Gb  lcd.o [1]
+FTMN                    0x1fff0440     0xc  Data  Gb  MK60_ftm.o [1]
+FTM_PWM_Duty            0x00000de3    0x36  Code  Gb  MK60_ftm.o [1]
+FTM_PWM_init            0x00000cad   0x136  Code  Gb  MK60_ftm.o [1]
+GPIOX                   0x1fff044c    0x14  Data  Gb  MK60_gpio.o [1]
+HS                      0x1fff043e     0x2  Data  Gb  main.o [1]
+LCD_Fill                0x0000049d    0x30  Code  Gb  lcd.o [1]
+LCD_Init                0x000004cd    0xf2  Code  Gb  lcd.o [1]
+LCD_Show_Number         0x0000069b    0x74  Code  Gb  lcd.o [1]
+LCD_WrCmd               0x0000045d    0x40  Code  Gb  lcd.o [1]
+LCD_WrDat               0x00000419    0x44  Code  Gb  lcd.o [1]
+LCD_write_char          0x00000641    0x5a  Code  Gb  lcd.o [1]
+LED_init                0x00000939    0x32  Code  Gb  main.o [1]
+OLED_DrawPoint          0x000005f5    0x3c  Code  Gb  lcd.o [1]
+OLED_GRAM               0x1fff0510   0x400  Data  Gb  lcd.o [1]
+OLED_Refresh_Gram       0x000005bf    0x36  Code  Gb  lcd.o [1]
+PORTX                   0x1fff04a8    0x14  Data  Gb  MK60_port.o [1]
+Region$$Table$$Base     0x0000160c           --   Gb  - Linker created -
+Region$$Table$$Limit    0x0000161c           --   Gb  - Linker created -
+Reset_Handler           0x00000411          Code  Gb  startup_MK60DZ10.o [1]
+UARTN                   0x1fff04bc    0x18  Data  Gb  MK60_uart.o [1]
+VS                      0x1fff043c     0x2  Data  Gb  main.o [1]
+V_Cnt                   0x1fff0410     0x1  Data  Gb  main.o [1]
+__BOOT_STACK_ADDRESS {Abs}
+                        0x2000fff8           --   Gb  command line/config [2]
+__VECTOR_RAM {Abs}      0x1fff0000           --   Gb  command line/config [2]
+__VECTOR_TABLE {Abs}    0x00000000           --   Gb  command line/config [2]
+__aeabi_memclr          0x00001541          Code  Gb  ABImemclr.o [5]
+__cmain                 0x0000161d          Code  Gb  cmain.o [5]
+__code_start__ {Abs}    0x00000410           --   Gb  command line/config [2]
+__exit                  0x00001649          Code  Gb  XXexit.o [5]
+__iar_Memset_word       0x00001549          Code  Gb  ABImemset.o [5]
+__iar_data_init3        0x000015e5    0x28  Code  Gb  data_init.o [5]
+__iar_program_start     0x00001655          Code  Gb  cstartup_M.o [5]
+__iar_unaligned___aeabi_memcpy
+                        0x000014a9          Code  Gb  ABImemcpy_unaligned.o [5]
+__iar_unaligned___aeabi_memcpy4
+                        0x000014c9          Code  Gb  ABImemcpy_unaligned.o [5]
+__iar_unaligned___aeabi_memcpy8
+                        0x000014c9          Code  Gb  ABImemcpy_unaligned.o [5]
+__iar_zero_init3        0x0000151f    0x22  Code  Gb  zero_init3.o [5]
+__vector_table          0x00000000   0x410  Data  Gb  vectors.o [1]
+_call_main              0x00001629          Code  Gb  cmain.o [5]
+_exit                   0x0000163d          Code  Gb  cexit.o [5]
+_main                   0x00001633          Code  Gb  cmain.o [5]
+bus_clk_khz             0x1fff2218     0x4  Data  Gb  system_MK60DZ10.o [1]
+common_startup          0x000013f9    0x48  Code  Gb  system_MK60DZ10.o [1]
+core_clk_khz            0x1fff2210     0x4  Data  Gb  system_MK60DZ10.o [1]
+core_clk_mhz            0x1fff2214     0x4  Data  Gb  system_MK60DZ10.o [1]
+default_isr             0x00001661     0x2  Code  Gb  FIRE_MK60_conf.o [1]
+dma_portx2buff_init     0x00001029    0xec  Code  Gb  MK60_dma.o [1]
+exit                    0x00001637     0x4  Code  Gb  exit.o [3]
+exti_init               0x00000fb7    0x4c  Code  Gb  MK60_port.o [1]
+gpio_init               0x00000c65    0x42  Code  Gb  MK60_gpio.o [1]
+img_flag                0x1fff0411     0x1  Data  Gb  main.o [1]
+imgbuff                 0x1fff0910  0x1900  Data  Gb  main.o [1]
+main                    0x0000096d   0x23e  Code  Gb  main.o [1]
+mcg_cfg                 0x1fff0460    0x44  Data  Gb  MK60_mcg.o [1]
+mcg_div                 0x1fff04a4     0x4  Data  Gb  MK60_mcg.o [1]
+mcg_div_count           0x00001139   0x12c  Code  Gb  MK60_mcg.o [1]
+num                     0x1fff0412     0x1  Data  Gb  main.o [1]
+pll_init                0x00001265    0x7c  Code  Gb  MK60_mcg.o [1]
+port_init               0x00000f91    0x26  Code  Gb  MK60_port.o [1]
+portb_handler           0x00000bad    0x56  Code  Gb  main.o [1]
+portc_handler           0x00000c05    0x36  Code  Gb  main.o [1]
+set_sys_dividers        0x1fff04d5    0x3c  Code  Gb  MK60_mcg.o [1]
+set_vector_handler      0x00001017     0x8  Code  Gb  misc.o [1]
+start                   0x000013b1    0x14  Code  Gb  system_MK60DZ10.o [1]
+sysinit                 0x000013c5    0x34  Code  Gb  system_MK60DZ10.o [1]
+systick_delay           0x00001115    0x18  Code  Gb  MK60_SysTick.o [1]
+sz                      0x1fff0414    0x28  Data  Gb  main.o [1]
+uart_init               0x00000e25   0x148  Code  Gb  MK60_uart.o [1]
+uart_putchar            0x00000f6d    0x14  Code  Gb  MK60_uart.o [1]
+wdog_disable            0x00001471    0x14  Code  Gb  MK60_wdog.o [1]
+wdog_unlock             0x00001485    0x1c  Code  Lc  MK60_wdog.o [1]
+write_vtor              0x00001011     0x6  Code  Gb  misc.o [1]
+
+
+[1] = C:\Users\jamorn\Desktop\Dev\Github\intelligent-car-SMU15\main_program\Prj\IAR\DZ10_Release\Obj
+[2] = command line
+[3] = dl7M_tlf.a
+[4] = m7M_tl.a
+[5] = rt7M_tl.a
+
+  4 418 bytes of readonly  code memory
+     60 bytes of readwrite code memory
+  1 312 bytes of readonly  data memory
+  7 632 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

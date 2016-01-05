@@ -29,7 +29,7 @@ void LED_init(void)
 }
 
 
-#define CAMERA_W            180              //定义摄像头图像宽度
+#define CAMERA_W            160              //定义摄像头图像宽度
 #define CAMERA_H            240              //定义摄像头图像高度
 #define CAMERA_R_H          40               //定义摄像头图像高度
 #define CAMERA_SIZE         CAMERA_W*CAMERA_H
@@ -37,8 +37,8 @@ void LED_init(void)
 #define WHITE_C 254
  
 
-int FLAG_L=0;//0丢失 1未丢失
-int FLAG_R=0; //0丢失 1未丢失
+//int FLAG_L=0;//0丢失 1未丢失
+//int FLAG_R=0;//0丢失 1未丢失
 
 uint8 imgbuff[CAMERA_R_H][CAMERA_W];                             //定义存储接收图像的数组
 
@@ -125,7 +125,7 @@ void  main(void)
             uart_putchar(UART4,imgbuff[j][i]);
           }
        }
-      
+        */
         /*************液晶屏显示程序**********/
         
         for(int j=0;j<CAMERA_R_H;j++)
@@ -152,46 +152,61 @@ void  main(void)
         int POINT_R; //定义图像采集的右点
         int POINT_L; //定义图像采集的左点
         int POINT_C; //定义图像采集的中点
-        int L = 30;   //定义要采集的行号
-
+        int L = 37;   //定义要采集的行号
+        int FLAG_L;//0丢失1未丢失
+        int FLAG_R;//0丢失1未丢失
         
         
-        
-        for (int i = 120; i>0; i--)//找左线
+        for (int i = 110; i>2; i--)//找左线
         {
-        	if(imgbuff[L][i]-imgbuff[L][i-1]>40 )
+        	if(imgbuff[L][i]-imgbuff[L][i-3] > 40 )
         	{
         		POINT_L = i;
         		LCD_Show_Number(70,3,POINT_L);
         		FLAG_L=1;
+                    break;
         	}
+          else FLAG_L=0;
         }
 
-        for (int i = 60; i < CAMERA_W; i++)
+        for (int i = 60; i < CAMERA_W; i++)//找右线
         {
-        	if(imgbuff[L][i]-imgbuff[L][i+1]>40 )
+        	if(imgbuff[L][i]-imgbuff[L][i+2] > 40 )
         	{
         		POINT_R = i;
         		LCD_Show_Number(70,4,POINT_R);
         		FLAG_R=1;
+                    break;
         	}
+          else FLAG_R = 0;
         }
-        if(FLAG_R=1,FLAG_L=1)
+        
+        LCD_Show_Number(70,1,FLAG_L);
+        LCD_Show_Number(70,2,FLAG_R);
+ 
+        
+        
+        if(FLAG_R == 1 && FLAG_L == 1)
         {
           POINT_C = (POINT_L+POINT_R)/2;
           LCD_Show_Number(70,7,POINT_C);
         }  
-        else if(FLAG_R == 1,FLAG_L == 0)
+        else if(FLAG_R == 1 && FLAG_L == 0)
         {
-          POINT_C = POINT_R - 60;
-          LCD_Show_Number(70,4,POINT_R);
+          POINT_C = POINT_R - 80;
+          LCD_Show_Number(70,8,POINT_C);
         }
-        else if(FLAG_R == 0,FLAG_L == 0)
+        else if(FLAG_R == 0 && FLAG_L == 1)
         {
           POINT_C = POINT_L + 70;
-          LCD_Show_Number(70,4,POINT_R);
+          LCD_Show_Number(70,6,POINT_C);
         }
-
+        else if(FLAG_R == 0 && FLAG_L == 0)
+        {
+          POINT_C=80;
+          LCD_Show_Number(70,9,POINT_C);
+        }
+         
 
 
         
@@ -231,49 +246,7 @@ void  main(void)
         }      
         */
    
-        
-        
-        
-        
-        
-        
-        
-        
-        /*
-        //float K_LEFT = 1.71;
-        //float K_RIGHT = 1.71;
-        float DUTY_F;
-        //float DUTY;
-        int MID= 120;//设定参考中点值
-        //K_RIGHT = 1.71; 
-        FTM_PWM_init(FTM0, FTM_CH0,50,775);   //初始化PWM输出中值 PTC1  775
-        if(POINT_C > MID)//右拐
-        {
-            DUTY_F = 775 - 1.71*(POINT_C - MID);
-            int DUTY=(int)DUTY_F;
-            if(DUTY<702)
-          {
-            DUTY = 705;
-          }//舵机保护
-            FTM_PWM_Duty(FTM0, FTM_CH0, DUTY);
-        }  
-
-
-        
-        if(POINT_C<MID)//左拐
-        {
-            DUTY_F = 775 + 1.71*(MID - POINT_C);
-            int DUTY=(int)DUTY_F;
-            if(DUTY>850)
-          {
-            DUTY = 845;
-          }
-            //舵机保护
-          FTM_PWM_Duty(FTM0, FTM_CH0, DUTY);
-        }   
-        */
-        
-          
+       
           
         //float K_LEFT = 1.71;
         //float K_RIGHT = 1.71;
@@ -301,9 +274,9 @@ void  main(void)
             //DUTY=(int)DUTY_F;
             if(DUTY>850)
           {
-            DUTY = 845;
+            DUTY = 840;
           }
-            //舵机保护
+           //舵机保护
           FTM_PWM_Duty(FTM0, FTM_CH0, DUTY);
         }      
          
