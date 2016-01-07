@@ -57,8 +57,8 @@
 #define FTM1_CH1    PTA13       //PTA9、PTA13、PTB1
 
 //      模块通道    端口          可选范围              建议
-#define FTM2_CH0    PTA10       //PTA10、PTB18
-#define FTM2_CH1    PTA11       //PTA11、PTB19
+#define FTM2_CH0    PTB18       //PTA10、PTB18
+#define FTM2_CH1    PTB19       //PTA11、PTB19
 
 
 //正交解码模块通道  端口          可选范围              建议

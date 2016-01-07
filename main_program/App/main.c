@@ -74,16 +74,20 @@ void portc_handler();
 
 void  main(void)
 {
-    /*************驱动程序**********/
-    FTM_PWM_init(FTM0, FTM_CH1,10000, 0);//A4
-    FTM_PWM_init(FTM0, FTM_CH2,10000, 1000);//A5
-  
-    FTM_PWM_init(FTM0, FTM_CH3,10000, 0);//A6
-    FTM_PWM_init(FTM0, FTM_CH4,10000, 1000);//A7
-  
-  
-  
-  
+      
+         
+          /*************驱动程序**********/
+      int DUTY_MOTO = 180;//默认速度
+      //int DUTY_MOTO_A = 200;//加速速度
+      FTM_PWM_init(FTM1, FTM_CH0,10000,0);//A12
+      FTM_PWM_init(FTM1, FTM_CH1,10000,0);//A13 
+      
+      
+      FTM_PWM_init(FTM2, FTM_CH0,10000,0);//B18
+      FTM_PWM_init(FTM2, FTM_CH1,10000,0);//B19
+
+      FTM_PWM_Duty(FTM1, FTM_CH0, DUTY_MOTO);//左轮
+      FTM_PWM_Duty(FTM2, FTM_CH0, DUTY_MOTO);//右轮
   
     DisableInterrupts;
     LED_init();
@@ -105,7 +109,14 @@ void  main(void)
     
    
     while(1)
-    {  
+    {
+      
+
+  
+  
+      
+      
+      
       //LCD_Show_Number(5,2,123);
       if(img_flag == IMG_FINISH)
       {
@@ -209,43 +220,7 @@ void  main(void)
          
 
 
-        
-        /*************控制程序**********/
-        /*
-        int MID;
-        float K_LEFT = 1.71;
-        float K_RIGHT = 1.71;
-        float DUTY_F;
-        int DUTY;
-        MID= s120;//设定参考中点值
-        K_RIGHT = 1.71; 
-        FTM_PWM_init(FTM0, FTM_CH0,50, 775);   //初始化PWM输出中值
-        if(POINT_C > MID)//右拐
-        {
-            DUTY_F = 775 - K_RIGHT*(POINT_C - MID);
-            DUTY=(int)DUTY_F;
-            if(DUTY<702)
-          {
-            DUTY = 705;
-          }//舵机保护
-            FTM_PWM_Duty(FTM0, FTM_CH0, DUTY);
-        }  
-
-
-        
-        if(POINT_C<MID)//左拐
-        {
-            DUTY_F = 775 + K_LEFT*(MID - POINT_C);
-            DUTY=(int)DUTY_F;
-            if(DUTY>850)
-          {
-            DUTY = 845;
-          }
-            //舵机保护
-          FTM_PWM_Duty(FTM0, FTM_CH0, DUTY);
-        }      
-        */
-   
+ 
        
           
         //float K_LEFT = 1.71;
@@ -257,7 +232,7 @@ void  main(void)
         FTM_PWM_init(FTM0, FTM_CH0,50,775);   //初始化PWM输出中值 PTC1  775
         if(POINT_C > MID)//右拐
         {
-            DUTY = 775 - 2*(POINT_C - MID);
+            DUTY = 775 - 3*(POINT_C - MID);
             //int DUTY=(int)DUTY_F;
             if(DUTY<702)
           {
@@ -278,7 +253,17 @@ void  main(void)
           }
            //舵机保护
           FTM_PWM_Duty(FTM0, FTM_CH0, DUTY);
-        }      
+        } 
+
+
+        /**********加速程序********/
+        /*
+        if (POINT_C <90 && POINT_C>70)
+        {
+        	FTM_PWM_Duty(FTM1, FTM_CH0, DUTY_MOTO_A);//左轮
+      		FTM_PWM_Duty(FTM2, FTM_CH0, DUTY_MOTO_A);//右轮
+        }
+         */
          
 
         PORTC_ISFR = ~0;               //写1清中断标志位(必须的，不然回导致一开中断就马上触发中断)
