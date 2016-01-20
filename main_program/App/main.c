@@ -35,11 +35,12 @@ void LED_init(void)
 #define CAMERA_SIZE         CAMERA_W*CAMERA_H
 #define BLACK_C 0
 #define WHITE_C 254
+#define Jump_threshold 60
+#define Interval 5
+#define Tracking_displacement 7
+#define Tracking_NUM 12
+
  
-
-//int FLAG_L=0;//0丢失 1未丢失
-//int FLAG_R=0;//0丢失 1未丢失
-
 uint8 imgbuff[CAMERA_R_H][CAMERA_W];                             //定义存储接收图像的数组
 
 uint8 V_Cnt = 0;
@@ -47,6 +48,20 @@ volatile IMG_STATUS_e      img_flag = IMG_START;        //图像状态
 
 uint16 VS=0;
 uint16 HS=0;
+
+uint8 POINT_R; //定义图像采集的右点
+uint8 POINT_L; //定义图像采集的左点
+uint8 POINT_C; //定义图像采集的中点
+uint8 L = 37; //定义要采集的行号
+uint8 FLAG_L;//0丢失1未丢失
+uint8 FLAG_R;//0丢失1未丢失
+uint8 left_line[40],right_line[40];
+
+
+
+
+
+
 
 uint8  sz[CAMERA_R_H]={ 30,31,32,
                 34,36,38,
@@ -159,20 +174,18 @@ void  main(void)
         }
         OLED_Refresh_Gram();
         
+        
+        
+        
+        
         /*************中线提取程序**********/
-        int POINT_R; //定义图像采集的右点
-        int POINT_L; //定义图像采集的左点
-        int POINT_C; //定义图像采集的中点
-        int L = 37;   //定义要采集的行号
-        int FLAG_L;//0丢失1未丢失
-        int FLAG_R;//0丢失1未丢失
         
         
         for (int i = 110; i>2; i--)//找左线
         {
-        	if(imgbuff[L][i]-imgbuff[L][i-3] > 40 )
+        	if(imgbuff[L][i]-imgbuff[L][i-2] > Jump_threshold )
         	{
-        		POINT_L = i;
+        		left_line[L] = i;
         		LCD_Show_Number(70,3,POINT_L);
         		FLAG_L=1;
                     break;
@@ -182,9 +195,9 @@ void  main(void)
 
         for (int i = 60; i < CAMERA_W; i++)//找右线
         {
-        	if(imgbuff[L][i]-imgbuff[L][i+2] > 40 )
+        	if(imgbuff[L][i]-imgbuff[L][i+2] > Jump_threshold )
         	{
-        		POINT_R = i;
+        		right_line[L] = i;
         		LCD_Show_Number(70,4,POINT_R);
         		FLAG_R=1;
                     break;
@@ -192,11 +205,45 @@ void  main(void)
           else FLAG_R = 0;
         }
         
-        LCD_Show_Number(70,1,FLAG_L);
-        LCD_Show_Number(70,2,FLAG_R);
+        //LCD_Show_Number(70,1,FLAG_L);
+        //LCD_Show_Number(70,2,FLAG_R);
  
+        /*******黑线跟踪********/
+        //左
+        if (FLAG_L == 1)
+        {
+          for(int i=CAMERA_R_H-1;i>1;i--)
+          {
+            for (int j=0;j<Tracking_NUM;j++)
+            {
+              if (imgbuff[i-1][left_line[i]+Tracking_displacement-j]-imgbuff[i-1][left_line[i]-j+Tracking_displacement-Interval]>=Jump_threshold)
+              {
+                left_line[i-1]=left_line[i]+Tracking_displacement-j;
+                break;
+              }
+            }
+          }
+        }
+        //右
+        if(FLAG_R == 1)
+        {
+          for(int i = CAMERA_R_H-1;i>1;i--)
+          {
+            for (int j=0;j<Tracking_NUM;j++)
+            {
+              if (imgbuff[i-1][left_line[i]+Tracking_displacement-j]-imgbuff[i-1][left_line[i]-j+Tracking_displacement-Interval]>=Jump_threshold)
+              {
+                left_line[i-1]=left_line[i]+Tracking_displacement-j;
+                break;
+              }
+            }
+          }
+        }
         
         
+        
+        
+/*        
         if(FLAG_R == 1 && FLAG_L == 1)
         {
           POINT_C = (POINT_L+POINT_R)/2;
@@ -217,7 +264,7 @@ void  main(void)
           POINT_C=80;
           LCD_Show_Number(70,9,POINT_C);
         }
-         
+*/         
 
 
  

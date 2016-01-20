@@ -10,7 +10,7 @@ LimitSize=0
 ByteLimit=50
 [DebugChecksum]
 <<<<<<< HEAD
-Checksum=-1105163399
+Checksum=1167472722
 =======
 Checksum=266331532
 >>>>>>> parent of 89ad245... 更改图像采集宽度
@@ -26,6 +26,10 @@ CStepIntDis=_ 0
 TraceBufferSize=0x00010000
 TraceStallIfFIFOFull=0x00000000
 TracePortSize=0x00000004
+[Log file]
+LoggingEnabled=_ 0
+LogFile=_ ""
+Category=_ 0
 [TermIOLog]
 LoggingEnabled=_ 0
 LogFile=_ ""
@@ -37,18 +41,11 @@ Mode=1
 Graph=0
 Symbiont=0
 Exclusions=
-[Trace1]
-Enabled=0
-ShowSource=1
 [Disassemble mode]
 mode=0
 [Breakpoints2]
 Bp0=_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\..\..\..\..\..\OV5116&&SONY CCD��K60��\App\main.c}.118.1" 0 0 1 "" 0 "" 0
 Count=1
-[Log file]
-LoggingEnabled=_ 0
-LogFile=_ ""
-Category=_ 0
 [Aliases]
 A0=_ "C:\Users\Xiaochaochao\Desktop\K60\OV5116\Board\src\FIRE_LED.C" ""
 A1=_ "C:\Users\Xiaochaochao\Desktop\K60\OV5116\Chip\src\MK60_DWT.c" ""
