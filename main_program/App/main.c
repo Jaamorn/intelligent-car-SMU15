@@ -35,11 +35,10 @@ void LED_init(void)
 #define CAMERA_SIZE         CAMERA_W*CAMERA_H
 #define BLACK_C 0
 #define WHITE_C 254
-#define Jump_threshold 60
-#define Interval 5
+#define Jump_threshold 50
+#define Interval 3
 #define Tracking_displacement 7
 #define Tracking_NUM 12
-
  
 uint8 imgbuff[CAMERA_R_H][CAMERA_W];                             //定义存储接收图像的数组
 
@@ -51,13 +50,12 @@ uint16 HS=0;
 
 uint8 POINT_R; //定义图像采集的右点
 uint8 POINT_L; //定义图像采集的左点
-uint8 POINT_C; //定义图像采集的中点
-uint8 L = 37; //定义要采集的行号
-uint8 FLAG_L;//0丢失1未丢失
-uint8 FLAG_R;//0丢失1未丢失
-uint8 left_line[40],right_line[40];
-
-
+//uint8 mid=0; //定义图像采集的中点
+uint8 POINT_C;
+uint8 L = 39; //定义要采集的行号
+uint8 FLAG_L=0;//0丢失1未丢失
+uint8 FLAG_R=0;//0丢失1未丢失
+uint8 left_line[40],right_line[40],mid_line[40];
 
 
 
@@ -83,6 +81,10 @@ uint8  sz[CAMERA_R_H]={ 30,31,32,
 //函数声明
 void portb_handler();
 void portc_handler();
+
+
+
+
 
 
 
@@ -138,7 +140,7 @@ void  main(void)
         img_flag = IMG_PROCESS;
         
         /********串口发送程序*************/
-        /*
+        
         uart_putchar(UART4,0xff);
         for(int j = 0;j<CAMERA_R_H;j++)
         {
@@ -151,7 +153,7 @@ void  main(void)
             uart_putchar(UART4,imgbuff[j][i]);
           }
        }
-        */
+        
         /*************液晶屏显示程序**********/
         
         for(int j=0;j<CAMERA_R_H;j++)
@@ -178,35 +180,54 @@ void  main(void)
         
         
         
-        /*************中线提取程序**********/
+        /**********扫描第L行*************/
         
         
-        for (int i = 110; i>2; i--)//找左线
+        for (int i = 80; i>=1; i--)//找左线
         {
-        	if(imgbuff[L][i]-imgbuff[L][i-2] > Jump_threshold )
+        	if(imgbuff[L][i]-imgbuff[L][i-Interval] >= Jump_threshold )
         	{
         		left_line[L] = i;
-        		LCD_Show_Number(70,3,POINT_L);
+
         		FLAG_L=1;
-                    break;
+            break;
         	}
-          else FLAG_L=0;
+          
+          else if(imgbuff[L][i-Interval]-imgbuff[L][i] > Jump_threshold) 
+          {
+            right_line[L] = i;
+            FLAG_R=1;
+            FLAG_L=0;
+            break;
+          }
+          
         }
 
-        for (int i = 60; i < CAMERA_W; i++)//找右线
+        for (int i = 80; i <= CAMERA_W; i++)//找右线
         {
-        	if(imgbuff[L][i]-imgbuff[L][i+2] > Jump_threshold )
+        	if(imgbuff[L][i]-imgbuff[L][i+Interval]>=Jump_threshold )
         	{
         		right_line[L] = i;
-        		LCD_Show_Number(70,4,POINT_R);
+        		
         		FLAG_R=1;
-                    break;
+            break;
         	}
-          else FLAG_R = 0;
+          
+          else if(imgbuff[L][i+Interval]-imgbuff[L][i] > Jump_threshold)
+          {
+            left_line[L] = i;
+            FLAG_L=1;
+            FLAG_R = 0;
+            break;
+          }
+          
         }
         
-        //LCD_Show_Number(70,1,FLAG_L);
-        //LCD_Show_Number(70,2,FLAG_R);
+        LCD_Show_Number(70,3,FLAG_L);
+        LCD_Show_Number(70,4,FLAG_R);
+ 
+
+
  
         /*******黑线跟踪********/
         //左
@@ -233,7 +254,7 @@ void  main(void)
             {
               if (imgbuff[i-1][left_line[i]+Tracking_displacement-j]-imgbuff[i-1][left_line[i]-j+Tracking_displacement-Interval]>=Jump_threshold)
               {
-                left_line[i-1]=left_line[i]+Tracking_displacement-j;
+                right_line[i-1]=right_line[i]+Tracking_displacement-j;
                 break;
               }
             }
@@ -241,8 +262,22 @@ void  main(void)
         }
         
         
-        
-        
+ //LCD_Show_Number(70,1,left_line[35]);
+ //LCD_Show_Number(70,2,left_line[20]);
+ 
+ int mid=0;
+ for(int i=20;i<=38;i++)
+ {
+   mid_line[i]=(left_line[i]+right_line[i])/2;
+   mid=mid+mid_line[i];
+ }
+ POINT_C = mid/19;
+   
+LCD_Show_Number(70,1,mid);
+ 
+ 
+ 
+ 
 /*        
         if(FLAG_R == 1 && FLAG_L == 1)
         {
@@ -308,7 +343,7 @@ void  main(void)
         if (POINT_C <90 && POINT_C>70)
         {
         	FTM_PWM_Duty(FTM1, FTM_CH0, DUTY_MOTO_A);//左轮
-      		FTM_PWM_Duty(FTM2, FTM_CH0, DUTY_MOTO_A);//右轮
+          FTM_PWM_Duty(FTM2, FTM_CH0, DUTY_MOTO_A);//右轮
         }
          */
          

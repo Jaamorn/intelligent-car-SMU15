@@ -10,7 +10,7 @@ LimitSize=0
 ByteLimit=50
 [DebugChecksum]
 <<<<<<< HEAD
-Checksum=1167472722
+Checksum=1187083786
 =======
 Checksum=266331532
 >>>>>>> parent of 89ad245... 更改图像采集宽度
@@ -26,6 +26,10 @@ CStepIntDis=_ 0
 TraceBufferSize=0x00010000
 TraceStallIfFIFOFull=0x00000000
 TracePortSize=0x00000004
+[array_types]
+Fmt0=uint8[40]	3	0
+[watch_formats]
+Fmt0={W}42:mid	3	0
 [Log file]
 LoggingEnabled=_ 0
 LogFile=_ ""
