@@ -12,7 +12,7 @@
  * @author     野火科技
  * @version    v5.0
  * @date       2013-08-28
- * 香港记者
+ * 香港记者//2016-1-24
  */
 
 #include "common.h"
@@ -35,11 +35,24 @@ void LED_init(void)
 #define CAMERA_SIZE         CAMERA_W*CAMERA_H
 #define BLACK_C 0
 #define WHITE_C 254
-#define Jump_threshold 50
+#define Jump_threshold 60
 #define Interval 3
 #define Tracking_displacement 7
-#define Tracking_NUM 12
- 
+#define Tracking_NUM 12 
+
+
+
+
+uint8 DUTY;//舵机输出占空比
+uint8 center;
+uint8 mid_count=0;
+uint8 L = 39; //定义要采集的行号
+uint8 flag_left[40];
+uint8 FLAG_L=0; //0丢失1未丢失
+uint8 flag_right[40];
+uint8 FLAG_R=0; //0丢失1未丢失
+uint8 left_line[40],right_line[40],mid_line[40];
+
 uint8 imgbuff[CAMERA_R_H][CAMERA_W];                             //定义存储接收图像的数组
 
 uint8 V_Cnt = 0;
@@ -47,19 +60,6 @@ volatile IMG_STATUS_e      img_flag = IMG_START;        //图像状态
 
 uint16 VS=0;
 uint16 HS=0;
-
-uint8 POINT_R; //定义图像采集的右点
-uint8 POINT_L; //定义图像采集的左点
-//uint8 mid=0; //定义图像采集的中点
-uint8 POINT_C;
-uint8 L = 39; //定义要采集的行号
-uint8 FLAG_L=0;//0丢失1未丢失
-uint8 FLAG_R=0;//0丢失1未丢失
-uint8 left_line[40],right_line[40],mid_line[40];
-
-
-
-
 
 uint8  sz[CAMERA_R_H]={ 30,31,32,
                 34,36,38,
@@ -85,26 +85,21 @@ void portc_handler();
 
 
 
-
-
-
-
 void  main(void)
 {
-      
-         
           /*************驱动程序**********/
       int DUTY_MOTO = 180;//默认速度
-      //int DUTY_MOTO_A = 200;//加速速度
+      int DUTY_MOTO_A = 200;//加速速度
       FTM_PWM_init(FTM1, FTM_CH0,10000,0);//A12
       FTM_PWM_init(FTM1, FTM_CH1,10000,0);//A13 
-      
-      
+           
       FTM_PWM_init(FTM2, FTM_CH0,10000,0);//B18
       FTM_PWM_init(FTM2, FTM_CH1,10000,0);//B19
 
       FTM_PWM_Duty(FTM1, FTM_CH0, DUTY_MOTO);//左轮
       FTM_PWM_Duty(FTM2, FTM_CH0, DUTY_MOTO);//右轮
+  
+  
   
     DisableInterrupts;
     LED_init();
@@ -126,21 +121,14 @@ void  main(void)
     
    
     while(1)
-    {
-      
-
-  
-  
-      
-      
-      
+    {  
       //LCD_Show_Number(5,2,123);
       if(img_flag == IMG_FINISH)
       {
         img_flag = IMG_PROCESS;
         
         /********串口发送程序*************/
-        
+        /*
         uart_putchar(UART4,0xff);
         for(int j = 0;j<CAMERA_R_H;j++)
         {
@@ -153,7 +141,7 @@ void  main(void)
             uart_putchar(UART4,imgbuff[j][i]);
           }
        }
-        
+       */ 
         /*************液晶屏显示程序**********/
         
         for(int j=0;j<CAMERA_R_H;j++)
@@ -176,177 +164,191 @@ void  main(void)
         }
         OLED_Refresh_Gram();
         
+       /**********扫描第L行*************/
+         flag_left[L]=0;
+         flag_right[L]=0;
+         FLAG_L=0;
+         FLAG_R=0;
         
-        
-        
-        
-        /**********扫描第L行*************/
-        
-        
-        for (int i = 80; i>=1; i--)//找左线
+        for (int i = 90; i>=4; i--)//找左线
         {
-        	if(imgbuff[L][i]-imgbuff[L][i-Interval] >= Jump_threshold )
-        	{
-        		left_line[L] = i;
-
-        		FLAG_L=1;
-            break;
-        	}
-          
-          else if(imgbuff[L][i-Interval]-imgbuff[L][i] > Jump_threshold) 
-          {
-            right_line[L] = i;
-            FLAG_R=1;
-            FLAG_L=0;
-            break;
-          }
-          
-        }
-
-        for (int i = 80; i <= CAMERA_W; i++)//找右线
-        {
-        	if(imgbuff[L][i]-imgbuff[L][i+Interval]>=Jump_threshold )
-        	{
-        		right_line[L] = i;
-        		
-        		FLAG_R=1;
-            break;
-        	}
-          
-          else if(imgbuff[L][i+Interval]-imgbuff[L][i] > Jump_threshold)
+          if(imgbuff[L][i]-imgbuff[L][i-Interval] >= Jump_threshold )
           {
             left_line[L] = i;
-            FLAG_L=1;
-            FLAG_R = 0;
+            flag_left[L]=1;
+            FLAG_L = 1;     
+            break;
+          }
+        }
+
+        for (int i = 70; i <= CAMERA_W-4; i++)//找右线
+        {
+          if(imgbuff[L][i]-imgbuff[L][i+Interval]>=Jump_threshold )
+          {
+            right_line[L] = i;          
+            flag_right[L]=1;
+            FLAG_R = 1;
             break;
           }
           
-        }
+        }        
         
-        LCD_Show_Number(70,3,FLAG_L);
-        LCD_Show_Number(70,4,FLAG_R);
- 
-
-
- 
         /*******黑线跟踪********/
         //左
-        if (FLAG_L == 1)
+        if ( flag_left[L] == 1 )
         {
-          for(int i=CAMERA_R_H-1;i>1;i--)
+          for(int i=L;i>=1;i--)
           {
             for (int j=0;j<Tracking_NUM;j++)
             {
               if (imgbuff[i-1][left_line[i]+Tracking_displacement-j]-imgbuff[i-1][left_line[i]-j+Tracking_displacement-Interval]>=Jump_threshold)
               {
                 left_line[i-1]=left_line[i]+Tracking_displacement-j;
+                flag_left[i-1]=1;
                 break;
+              }
+              else
+              {
+                flag_left[i-1]=0;
               }
             }
           }
         }
         //右
-        if(FLAG_R == 1)
+        if(flag_right[L] == 1)
         {
-          for(int i = CAMERA_R_H-1;i>1;i--)
+          for(int i = L;i>=1;i--)
           {
             for (int j=0;j<Tracking_NUM;j++)
             {
-              if (imgbuff[i-1][left_line[i]+Tracking_displacement-j]-imgbuff[i-1][left_line[i]-j+Tracking_displacement-Interval]>=Jump_threshold)
+              if (imgbuff[i-1][right_line[i]-Tracking_displacement+j]-imgbuff[i-1][right_line[i]-Tracking_displacement+j+Interval]>=Jump_threshold)
               {
-                right_line[i-1]=right_line[i]+Tracking_displacement-j;
+                right_line[i-1]=right_line[i]-Tracking_displacement+j;
+                flag_right[i-1]=1;
                 break;
+              }
+              else
+              {
+                flag_right[i-1]=0;
               }
             }
           }
         }
+
+
+        
+           /****中值计算*****/
+
+        int mid=0;
+        int left=0;
+        int right=0;
+        if(FLAG_R==1 && FLAG_L==1)
+        {
+            for(int i=20;i<=38;i++)
+            {
+               mid_line[i]=(left_line[i]+right_line[i])/2;
+               mid=mid+mid_line[i];
+               mid_count=mid;
+            }
+            center = mid/19;          
+        }
+        else if (FLAG_R==0 && FLAG_L==0)
+        //else if(flag_right[L] == 0 && flag_left[L] == 0)
+        {
+           center=80;
+        }
+        
+        else if (FLAG_L==1 && FLAG_R==0)
+        {
+          for(int i=20;i<=38;i++)
+          {
+            left=left+left_line[i];
+          }
+          left=left/19;
+          center=left+70;
+        }
+        else if (FLAG_L==0 && FLAG_R==1)
+        {
+          for(int i=20;i<=38;i++)
+          {
+            right=right+right_line[i];
+          }
+          right=right/19;
+          center = right-80;
+        }
         
         
- //LCD_Show_Number(70,1,left_line[35]);
- //LCD_Show_Number(70,2,left_line[20]);
- 
- int mid=0;
- for(int i=20;i<=38;i++)
- {
-   mid_line[i]=(left_line[i]+right_line[i])/2;
-   mid=mid+mid_line[i];
- }
- POINT_C = mid/19;
-   
-LCD_Show_Number(70,1,mid);
- 
- 
- 
- 
+        LCD_Show_Number(70,1,center);
+        LCD_Show_Number(70,2,FLAG_L);
+        LCD_Show_Number(70,3,FLAG_R);
+
+
+
+
+
+
 /*        
-        if(FLAG_R == 1 && FLAG_L == 1)
+        if(flag_right[L] == 1 && flag_left[L] == 1)
         {
-          POINT_C = (POINT_L+POINT_R)/2;
-          LCD_Show_Number(70,7,POINT_C);
+          center = (POINT_L+POINT_R)/2;
+          LCD_Show_Number(70,7,center);
         }  
-        else if(FLAG_R == 1 && FLAG_L == 0)
+        else if(flag_right[L] == 1 && flag_left[L] == 0)
         {
-          POINT_C = POINT_R - 80;
-          LCD_Show_Number(70,8,POINT_C);
+          center = POINT_R - 80;
+          LCD_Show_Number(70,8,center);
         }
-        else if(FLAG_R == 0 && FLAG_L == 1)
+        else if(flag_right[L] == 0 && flag_left[L] == 1)
         {
-          POINT_C = POINT_L + 70;
-          LCD_Show_Number(70,6,POINT_C);
+          center = POINT_L + 70;
+          LCD_Show_Number(70,6,center);
         }
-        else if(FLAG_R == 0 && FLAG_L == 0)
+        else if(flag_right[L] == 0 && flag_left[L] == 0)
         {
-          POINT_C=80;
-          LCD_Show_Number(70,9,POINT_C);
+          center=80;
+          LCD_Show_Number(70,9,center);
         }
-*/         
+*/ 
 
-
- 
-       
-          
-        //float K_LEFT = 1.71;
-        //float K_RIGHT = 1.71;
-        //float DUTY_F;
         int DUTY;
-        int MID= 80;//设定参考中点值
-        //K_RIGHT = 1.71; 
+        int MID= 85;//设定参考中点值
         FTM_PWM_init(FTM0, FTM_CH0,50,775);   //初始化PWM输出中值 PTC1  775
-        if(POINT_C > MID)//右拐
+        if(center > MID)//右拐
         {
-            DUTY = 775 - 3*(POINT_C - MID);
+            DUTY = 775 - 2*(center - MID);
             //int DUTY=(int)DUTY_F;
             if(DUTY<702)
-          {
-            DUTY = 705;
-          }//舵机保护
-            FTM_PWM_Duty(FTM0, FTM_CH0, DUTY);
+            {
+              DUTY = 705;
+            }//舵机保护
         }  
 
 
         
-        if(POINT_C<MID)//左拐
+        if(center<MID)//左拐
         {
-            DUTY = 775 + 2*(MID - POINT_C);
+            DUTY = 775 + 2*(MID - center);
             //DUTY=(int)DUTY_F;
             if(DUTY>850)
-          {
-            DUTY = 840;
-          }
+            {
+              DUTY = 840;
+            }
            //舵机保护
-          FTM_PWM_Duty(FTM0, FTM_CH0, DUTY);
         } 
-
-
-        /**********加速程序********/
-        /*
-        if (POINT_C <90 && POINT_C>70)
-        {
-        	FTM_PWM_Duty(FTM1, FTM_CH0, DUTY_MOTO_A);//左轮
-          FTM_PWM_Duty(FTM2, FTM_CH0, DUTY_MOTO_A);//右轮
-        }
-         */
          
+        FTM_PWM_Duty(FTM0, FTM_CH0, DUTY);
+        
+        
+        
+        /*********加速程序*********/
+        /*
+        if(center>=70 && center<=90)
+        {
+           FTM_PWM_Duty(FTM1, FTM_CH0, DUTY_MOTO_A);//左轮
+           FTM_PWM_Duty(FTM2, FTM_CH0, DUTY_MOTO_A);//右轮
+        }
+        */   
+        
 
         PORTC_ISFR = ~0;               //写1清中断标志位(必须的，不然回导致一开中断就马上触发中断)
         enable_irq(PORTC_IRQn);
@@ -357,7 +359,7 @@ LCD_Show_Number(70,1,mid);
 
 uint8 num;
 
-/*!
+/*
  *  @brief      PORTB中断服务函数
  *  @since      v5.0
  */
