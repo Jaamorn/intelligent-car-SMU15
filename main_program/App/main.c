@@ -39,18 +39,20 @@ void LED_init(void)
 #define Interval 3
 #define Tracking_displacement 7
 #define Tracking_NUM 12 
+#define L 39 //定义要采集的行号
 
 
 
-
-uint8 DUTY;//舵机输出占空比
+uint16 DUTY;//舵机输出占空比
 uint8 center;
 uint8 mid_count=0;
-uint8 L = 39; //定义要采集的行号
+
 uint8 flag_left[40];
 uint8 FLAG_L=0; //0丢失1未丢失
 uint8 flag_right[40];
 uint8 FLAG_R=0; //0丢失1未丢失
+uint8 flag_acc;
+uint8 flag_slo;
 uint8 left_line[40],right_line[40],mid_line[40];
 
 uint8 imgbuff[CAMERA_R_H][CAMERA_W];                             //定义存储接收图像的数组
@@ -88,8 +90,12 @@ void portc_handler();
 void  main(void)
 {
           /*************驱动程序**********/
-      int DUTY_MOTO = 180;//默认速度
-      int DUTY_MOTO_A = 200;//加速速度
+      int DUTY_MOTO = 190;//默认速度
+      int DUTY_MOTO_A = 210;//加速速度
+      int DUTY_MOTO_S = 170;//减速速度
+      flag_slo=0;
+      flag_acc=0;
+      
       FTM_PWM_init(FTM1, FTM_CH0,10000,0);//A12
       FTM_PWM_init(FTM1, FTM_CH1,10000,0);//A13 
            
@@ -248,7 +254,7 @@ void  main(void)
             {
                mid_line[i]=(left_line[i]+right_line[i])/2;
                mid=mid+mid_line[i];
-               mid_count=mid;
+               mid_count++;
             }
             center = mid/19;          
         }
@@ -256,6 +262,7 @@ void  main(void)
         //else if(flag_right[L] == 0 && flag_left[L] == 0)
         {
            center=80;
+           flag_acc=0;
         }
         
         else if (FLAG_L==1 && FLAG_R==0)
@@ -265,7 +272,8 @@ void  main(void)
             left=left+left_line[i];
           }
           left=left/19;
-          center=left+70;
+          center=left+50;//原70
+          flag_slo=1;
         }
         else if (FLAG_L==0 && FLAG_R==1)
         {
@@ -274,7 +282,8 @@ void  main(void)
             right=right+right_line[i];
           }
           right=right/19;
-          center = right-80;
+          center = right-50;
+          flag_slo=1;
         }
         
         
@@ -310,7 +319,7 @@ void  main(void)
         }
 */ 
 
-        int DUTY;
+        //int DUTY;
         int MID= 85;//设定参考中点值
         FTM_PWM_init(FTM0, FTM_CH0,50,775);   //初始化PWM输出中值 PTC1  775
         if(center > MID)//右拐
@@ -341,13 +350,19 @@ void  main(void)
         
         
         /*********加速程序*********/
-        /*
-        if(center>=70 && center<=90)
+        
+        if(center>=70 && center<=90 && flag_acc==1)
         {
            FTM_PWM_Duty(FTM1, FTM_CH0, DUTY_MOTO_A);//左轮
            FTM_PWM_Duty(FTM2, FTM_CH0, DUTY_MOTO_A);//右轮
+           LCD_Show_Number(70,5,flag_acc);
         }
-        */   
+        if(flag_slo==1)
+        {
+           FTM_PWM_Duty(FTM1, FTM_CH0, DUTY_MOTO_S);//左轮
+           FTM_PWM_Duty(FTM2, FTM_CH0, DUTY_MOTO_S);//右轮
+        }
+         
         
 
         PORTC_ISFR = ~0;               //写1清中断标志位(必须的，不然回导致一开中断就马上触发中断)
