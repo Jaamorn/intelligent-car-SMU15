@@ -35,18 +35,18 @@ void LED_init(void)
 #define CAMERA_SIZE         CAMERA_W*CAMERA_H
 #define BLACK_C 0
 #define WHITE_C 254
-#define Jump_threshold 60
+#define Jump_threshold 40
 #define Interval 3
 #define Tracking_displacement 7
 #define Tracking_NUM 12 
-#define L 39 //定义要采集的行号
+//#define L 39 //定义要采集的行号
 
 
 
 uint16 DUTY;//舵机输出占空比
 uint8 center;
-uint8 mid_count=0;
-
+uint8 mid_count;
+uint8 L;
 uint8 flag_left[40];
 uint8 FLAG_L=0; //0丢失1未丢失
 uint8 flag_right[40];
@@ -90,9 +90,9 @@ void portc_handler();
 void  main(void)
 {
           /*************驱动程序**********/
-      int DUTY_MOTO = 260;//默认速度
-      int DUTY_MOTO_A = 360;//加速速度
-      int DUTY_MOTO_S = 180;//减速速度//170
+      int DUTY_MOTO = 200;//默认速度//200
+      int DUTY_MOTO_A = 240;//加速速度//240
+      int DUTY_MOTO_S = 170;//减速速度//170
       //flag_slo=0;
       //flag_acc=1;
       
@@ -175,8 +175,8 @@ void  main(void)
          flag_right[L]=0;
          FLAG_L=0;
          FLAG_R=0;
-        
-        for (int i = 90; i>=4; i--)//找左线
+         L=39;
+        for (int i = 80; i>=4; i--)//找左线
         {
           if(imgbuff[L][i]-imgbuff[L][i-Interval] >= Jump_threshold )
           {
@@ -224,6 +224,7 @@ void  main(void)
               else
               {
                 flag_left[i-1]=0;
+                flag_acc=0;
               }
             }
           }
@@ -244,6 +245,7 @@ void  main(void)
               else
               {
                 flag_right[i-1]=0;
+                flag_acc=0;
               }
             }
           }
@@ -258,16 +260,22 @@ void  main(void)
         int right=0;
         flag_slo=0;
         flag_acc=1;
+        mid_count=0;
+        /*
         if(flag_right[2]==1 && flag_left[2]==1)
         {
         	for(int i=2;i<=38;i++)
         	{
         		mid_line[i]=(left_line[i]+right_line[i])/2;
         		mid=mid+mid_line[i];
+                    mid_count++;
+                    flag_acc=1;
+                    
         	}
-        	center=mid/37;
+        	center=mid/mid_count;
         }
-        else if(FLAG_R==1 && FLAG_L==1)
+        */
+        if(FLAG_R==1 && FLAG_L==1)
         {
             for(int i=20;i<=38;i++)
             {
@@ -275,16 +283,56 @@ void  main(void)
                mid=mid+mid_line[i];
                mid_count++;
             }
-            center = mid/19;          
+            center = mid/mid_count;          
         }
-        else if (FLAG_R==0 && FLAG_L==0)
+        else if (FLAG_R==0 && FLAG_L==0)//丢两条线
         //else if(flag_right[L] == 0 && flag_left[L] == 0)
         {
-           center=80;
-           flag_acc=0;
-           flag_slo=1;
+          L=20;
+          for (int i = 95; i>=4; i--)//找左线
+          {
+             if(imgbuff[L][i]-imgbuff[L][i-Interval] >= Jump_threshold )
+             {
+               left_line[L] = i;
+               flag_left[L]=1;  
+               break;
+             }
+             else
+             {
+                flag_left[L]=0;
+                flag_slo=0;
+             }
+          }
+
+          for (int i = 65; i <= CAMERA_W-4; i++)//找右线
+          {
+          if(imgbuff[L][i]-imgbuff[L][i+Interval]>=Jump_threshold )
+           {
+              right_line[L] = i;          
+              flag_right[L]=1;
+              break;
+              
+           }
+          else
+           {
+            flag_right[L]=0;
+            flag_slo=0;
+           }         
+          }
+          
+            if(flag_right[L]==1 && flag_left[L]==1)
+            {
+             center=(right_line[L]+left_line[L])/2;
+             flag_acc=1;
+             flag_slo=1;
+            }
+            else
+            {
+              center=80;
+              flag_slo=1;
+            }
         }
-        
+          
         else if (FLAG_L==1 && FLAG_R==0)
         {
           for(int i=20;i<=38;i++)
@@ -340,11 +388,11 @@ void  main(void)
 */ 
 
         //int DUTY;
-        int MID= 85;//设定参考中点值
+        int MID= 80;//设定参考中点值
         FTM_PWM_init(FTM0, FTM_CH0,50,775);   //初始化PWM输出中值 PTC1  775
         if(center > MID)//右拐
         {
-            DUTY = 775 - 1.9*(center - MID);
+            DUTY = 775 - 2*(center - MID);
             //int DUTY=(int)DUTY_F;
             if(DUTY<702)
             {
@@ -356,7 +404,7 @@ void  main(void)
         
         if(center<MID)//左拐
         {
-            DUTY = 775 + 1.9*(MID - center);
+            DUTY = 775 + 2*(MID - center);
             //DUTY=(int)DUTY_F;
             if(DUTY>850)
             {
