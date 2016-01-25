@@ -90,11 +90,12 @@ void portc_handler();
 void  main(void)
 {
           /*************驱动程序**********/
-      int DUTY_MOTO = 190;//默认速度
-      int DUTY_MOTO_A = 210;//加速速度
-      int DUTY_MOTO_S = 170;//减速速度
-      flag_slo=0;
-      flag_acc=0;
+      int DUTY_MOTO = 260;//默认速度
+      int DUTY_MOTO_A = 360;//加速速度
+      int DUTY_MOTO_S = 180;//减速速度//170
+      //flag_slo=0;
+      //flag_acc=1;
+      
       
       FTM_PWM_init(FTM1, FTM_CH0,10000,0);//A12
       FTM_PWM_init(FTM1, FTM_CH1,10000,0);//A13 
@@ -102,8 +103,7 @@ void  main(void)
       FTM_PWM_init(FTM2, FTM_CH0,10000,0);//B18
       FTM_PWM_init(FTM2, FTM_CH1,10000,0);//B19
 
-      FTM_PWM_Duty(FTM1, FTM_CH0, DUTY_MOTO);//左轮
-      FTM_PWM_Duty(FTM2, FTM_CH0, DUTY_MOTO);//右轮
+      
   
   
   
@@ -185,6 +185,10 @@ void  main(void)
             FLAG_L = 1;     
             break;
           }
+          else
+          {
+            flag_left[L]=0;
+          }
         }
 
         for (int i = 70; i <= CAMERA_W-4; i++)//找右线
@@ -195,6 +199,10 @@ void  main(void)
             flag_right[L]=1;
             FLAG_R = 1;
             break;
+          }
+          else
+          {
+            flag_right[L]=0;
           }
           
         }        
@@ -248,7 +256,18 @@ void  main(void)
         int mid=0;
         int left=0;
         int right=0;
-        if(FLAG_R==1 && FLAG_L==1)
+        flag_slo=0;
+        flag_acc=1;
+        if(flag_right[2]==1 && flag_left[2]==1)
+        {
+        	for(int i=2;i<=38;i++)
+        	{
+        		mid_line[i]=(left_line[i]+right_line[i])/2;
+        		mid=mid+mid_line[i];
+        	}
+        	center=mid/37;
+        }
+        else if(FLAG_R==1 && FLAG_L==1)
         {
             for(int i=20;i<=38;i++)
             {
@@ -263,6 +282,7 @@ void  main(void)
         {
            center=80;
            flag_acc=0;
+           flag_slo=1;
         }
         
         else if (FLAG_L==1 && FLAG_R==0)
@@ -324,11 +344,11 @@ void  main(void)
         FTM_PWM_init(FTM0, FTM_CH0,50,775);   //初始化PWM输出中值 PTC1  775
         if(center > MID)//右拐
         {
-            DUTY = 775 - 2*(center - MID);
+            DUTY = 775 - 1.9*(center - MID);
             //int DUTY=(int)DUTY_F;
             if(DUTY<702)
             {
-              DUTY = 705;
+              DUTY = 702;
             }//舵机保护
         }  
 
@@ -336,11 +356,11 @@ void  main(void)
         
         if(center<MID)//左拐
         {
-            DUTY = 775 + 2*(MID - center);
+            DUTY = 775 + 1.9*(MID - center);
             //DUTY=(int)DUTY_F;
             if(DUTY>850)
             {
-              DUTY = 840;
+              DUTY = 850;
             }
            //舵机保护
         } 
@@ -349,7 +369,9 @@ void  main(void)
         
         
         
-        /*********加速程序*********/
+        /*********速度控制程序*********/
+        //默认速度
+
         
         if(center>=70 && center<=90 && flag_acc==1)
         {
@@ -357,10 +379,15 @@ void  main(void)
            FTM_PWM_Duty(FTM2, FTM_CH0, DUTY_MOTO_A);//右轮
            LCD_Show_Number(70,5,flag_acc);
         }
-        if(flag_slo==1)
+        else if(flag_slo==1)
         {
            FTM_PWM_Duty(FTM1, FTM_CH0, DUTY_MOTO_S);//左轮
            FTM_PWM_Duty(FTM2, FTM_CH0, DUTY_MOTO_S);//右轮
+        }
+        else
+        {
+            FTM_PWM_Duty(FTM1, FTM_CH0, DUTY_MOTO);//左轮
+            FTM_PWM_Duty(FTM2, FTM_CH0, DUTY_MOTO);//右轮
         }
          
         
