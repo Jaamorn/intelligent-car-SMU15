@@ -12,7 +12,7 @@
  * @author     野火科技
  * @version    v5.0
  * @date       2013-08-28
- * 香港记者//2016-1-24
+ * 香港记者 2016-1-24
  */
 
 #include "common.h"
@@ -35,25 +35,25 @@ void LED_init(void)
 #define CAMERA_SIZE         CAMERA_W*CAMERA_H
 #define BLACK_C 0
 #define WHITE_C 254
-#define Jump_threshold 40
-#define Interval 3
-#define Tracking_displacement 7
-#define Tracking_NUM 12 
+#define Jump_threshold 40 //定义跳变阀值
+#define Interval 3 //定义跳变检测宽度
+#define Tracking_displacement 7 //决定寻线起始位置
+#define Tracking_NUM 12 //定义寻线范围
 //#define L 39 //定义要采集的行号
 
 
 
 uint16 DUTY;//舵机输出占空比
-uint8 center;
-uint8 mid_count;
-uint8 L;
-uint8 flag_left[40];
-uint8 FLAG_L=0; //0丢失1未丢失
-uint8 flag_right[40];
-uint8 FLAG_R=0; //0丢失1未丢失
-uint8 flag_acc;
-uint8 flag_slo;
-uint8 left_line[40],right_line[40],mid_line[40];
+uint8 center;//图像中线
+uint8 mid_count;//用于中线计数
+uint8 L;//起始行
+uint8 flag_left[40];//左线标志位数组
+uint8 FLAG_L=0; //左底线标志位 0丢失1未丢失
+uint8 flag_right[40];//右线标志位
+uint8 FLAG_R=0; //右底线标志位 0丢失1未丢失
+uint8 flag_acc;//加速标志位
+uint8 flag_slo;//低速标志位
+uint8 left_line[40],right_line[40],mid_line[40];//左右中线数组
 
 uint8 imgbuff[CAMERA_R_H][CAMERA_W];                             //定义存储接收图像的数组
 
@@ -89,14 +89,12 @@ void portc_handler();
 
 void  main(void)
 {
-          /*************驱动程序**********/
-      int DUTY_MOTO = 200;//默认速度//200
-      int DUTY_MOTO_A = 240;//加速速度//240
+      /*************驱动程序**********/
+      int DUTY_MOTO = 190;//默认速度//200
+      int DUTY_MOTO_A = 245;//加速速度//240
       int DUTY_MOTO_S = 170;//减速速度//170
-      //flag_slo=0;
-      //flag_acc=1;
-      
-      
+     
+      //电机pwm初始化
       FTM_PWM_init(FTM1, FTM_CH0,10000,0);//A12
       FTM_PWM_init(FTM1, FTM_CH1,10000,0);//A13 
            
@@ -126,9 +124,9 @@ void  main(void)
     EnableInterrupts;   //数据采集完成
     
    
-    while(1)
+    while(1)//主控制循环
     {  
-      //LCD_Show_Number(5,2,123);
+      
       if(img_flag == IMG_FINISH)
       {
         img_flag = IMG_PROCESS;
@@ -185,10 +183,6 @@ void  main(void)
             FLAG_L = 1;     
             break;
           }
-          else
-          {
-            flag_left[L]=0;
-          }
         }
 
         for (int i = 70; i <= CAMERA_W-4; i++)//找右线
@@ -200,11 +194,6 @@ void  main(void)
             FLAG_R = 1;
             break;
           }
-          else
-          {
-            flag_right[L]=0;
-          }
-          
         }        
         
         /*******黑线跟踪********/
@@ -253,7 +242,7 @@ void  main(void)
 
 
         
-           /****中值计算*****/
+        /****中值计算*****/
 
         int mid=0;
         int left=0;
@@ -261,6 +250,7 @@ void  main(void)
         flag_slo=0;
         flag_acc=1;
         mid_count=0;
+        /*********小s判断 为减慢直到速度没有使用*********/
         /*
         if(flag_right[2]==1 && flag_left[2]==1)
         {
@@ -270,7 +260,6 @@ void  main(void)
         		mid=mid+mid_line[i];
                     mid_count++;
                     flag_acc=1;
-                    
         	}
         	center=mid/mid_count;
         }
@@ -286,8 +275,8 @@ void  main(void)
             center = mid/mid_count;          
         }
         else if (FLAG_R==0 && FLAG_L==0)//丢两条线
-        //else if(flag_right[L] == 0 && flag_left[L] == 0)
         {
+          /********搜索20行 提高十字稳定性*******/
           L=20;
           for (int i = 95; i>=4; i--)//找左线
           {
@@ -319,20 +308,22 @@ void  main(void)
             flag_slo=0;
            }         
           }
-          
-            if(flag_right[L]==1 && flag_left[L]==1)
-            {
-             center=(right_line[L]+left_line[L])/2;
-             flag_acc=1;
-             flag_slo=1;
-            }
-            else
-            {
-              center=80;
-              flag_slo=1;
-            }
+          /******根据20行数据计算中线*******/
+          if(flag_right[L]==1 && flag_left[L]==1)
+          {
+           center=(right_line[L]+left_line[L])/2;
+           flag_acc=1;
+           flag_slo=1;
+          }
+          else
+          {
+            center=80;
+            flag_slo=1;
+          }
         }
-          
+         
+        /***********丢失右线***********/
+        
         else if (FLAG_L==1 && FLAG_R==0)
         {
           for(int i=20;i<=38;i++)
@@ -340,9 +331,12 @@ void  main(void)
             left=left+left_line[i];
           }
           left=left/19;
-          center=left+50;//原70
+          center=left+45;//原70
           flag_slo=1;
         }
+        
+        /***********丢失左线***********/
+        
         else if (FLAG_L==0 && FLAG_R==1)
         {
           for(int i=20;i<=38;i++)
@@ -364,40 +358,17 @@ void  main(void)
 
 
 
-/*        
-        if(flag_right[L] == 1 && flag_left[L] == 1)
-        {
-          center = (POINT_L+POINT_R)/2;
-          LCD_Show_Number(70,7,center);
-        }  
-        else if(flag_right[L] == 1 && flag_left[L] == 0)
-        {
-          center = POINT_R - 80;
-          LCD_Show_Number(70,8,center);
-        }
-        else if(flag_right[L] == 0 && flag_left[L] == 1)
-        {
-          center = POINT_L + 70;
-          LCD_Show_Number(70,6,center);
-        }
-        else if(flag_right[L] == 0 && flag_left[L] == 0)
-        {
-          center=80;
-          LCD_Show_Number(70,9,center);
-        }
-*/ 
-
-        //int DUTY;
+         /***********舵机控制程序***********/
         int MID= 80;//设定参考中点值
-        FTM_PWM_init(FTM0, FTM_CH0,50,775);   //初始化PWM输出中值 PTC1  775
+        FTM_PWM_init(FTM0, FTM_CH0,50,775);   //初始化舵机PWM输出中值 PTC1  775
         if(center > MID)//右拐
         {
             DUTY = 775 - 2*(center - MID);
-            //int DUTY=(int)DUTY_F;
+            //舵机保护
             if(DUTY<702)
             {
               DUTY = 702;
-            }//舵机保护
+            }
         }  
 
 
@@ -405,12 +376,11 @@ void  main(void)
         if(center<MID)//左拐
         {
             DUTY = 775 + 2*(MID - center);
-            //DUTY=(int)DUTY_F;
+            //舵机保护
             if(DUTY>850)
             {
               DUTY = 850;
             }
-           //舵机保护
         } 
          
         FTM_PWM_Duty(FTM0, FTM_CH0, DUTY);
@@ -418,21 +388,19 @@ void  main(void)
         
         
         /*********速度控制程序*********/
-        //默认速度
 
-        
-        if(center>=70 && center<=90 && flag_acc==1)
+        if(center>=70 && center<=90 && flag_acc==1)//加速判定
         {
            FTM_PWM_Duty(FTM1, FTM_CH0, DUTY_MOTO_A);//左轮
            FTM_PWM_Duty(FTM2, FTM_CH0, DUTY_MOTO_A);//右轮
            LCD_Show_Number(70,5,flag_acc);
         }
-        else if(flag_slo==1)
+        else if(flag_slo==1)//低速判定
         {
            FTM_PWM_Duty(FTM1, FTM_CH0, DUTY_MOTO_S);//左轮
            FTM_PWM_Duty(FTM2, FTM_CH0, DUTY_MOTO_S);//右轮
         }
-        else
+        else//输出默认速度
         {
             FTM_PWM_Duty(FTM1, FTM_CH0, DUTY_MOTO);//左轮
             FTM_PWM_Duty(FTM2, FTM_CH0, DUTY_MOTO);//右轮
@@ -440,7 +408,7 @@ void  main(void)
          
         
 
-        PORTC_ISFR = ~0;               //写1清中断标志位(必须的，不然回导致一开中断就马上触发中断)
+        PORTC_ISFR = ~0;               //写清中断标志位(必须的，不然回导致一开中断就马上触发中断)
         enable_irq(PORTC_IRQn);
         img_flag = IMG_START;
       }
